@@ -6,13 +6,24 @@ export interface Command {
     autocomplete?: (interaction: AutocompleteInteraction) => void,
     modal?: (interaction: ModalSubmitInteraction<CacheType>) => void,
     cooldown?: number // in seconds
-}
+};
 
 export interface BotEvent {
     name: string,
     once?: boolean | false,
     execute: (...args?) => void
-}
+};
+
+
+export type Rarity = "common" | "uncommon" | "rare" | "epic" | "legendary" | "mythical";
+export type CardType = "god" | "hero" | "monster";
+export type Location = "olympus" | "underworld" | "tartarus";
+export interface Card {
+    id: string, 
+    rarity: Rarity,
+    type: CardType,
+    location?: Location
+};
 
 declare global {
     namespace NodeJS {
@@ -24,11 +35,11 @@ declare global {
             DB_AUTH: string,
         }
     }
-}
+};
 
 declare module "discord.js" {
     export interface Client {
         commands: Collection<string, Command>
         cooldowns: Collection<string, number>
     }
-}
+};

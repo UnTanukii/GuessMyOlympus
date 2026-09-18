@@ -1,3 +1,81 @@
 {
-    
+    "cards": {
+        "rarity": {
+            "common": "Commun",
+            "uncommon": "Peu commun",
+            "rare": "Rare",
+            "epic": "Épique",
+            "legendary": "Légendaire",
+            "mythical": "Mythique"
+        },
+        "type": {
+            "god": "Dieu/Déesse ⚡",
+            "hero": "Héros/Héroïne 🛡️",
+            "monster": "Monstre 🐉"
+        },
+        "location": {
+            "olympus": "Mont Olympe 🏛️",
+            "underworld": "Enfers 💀",
+            "tartarus": "Tartare 🔥"
+        },
+        "fields":{
+            "description": "Description",
+            "rarity": "Rareté",
+            "type": "Type",
+            "location": "Lieu de résidence"
+        },
+
+        "zeus": {
+            "name": "Zeus",
+            "description": "Le roi des dieux, maître du ciel et de la foudre."
+        },
+        "poseidon": {
+            "name": "Poséidon",
+            "description": "Le dieu des mers, capable de provoquer des tempêtes et des tremblements de terre."
+        },
+        "hera": {
+            "name": "Héra",
+            "description": "La reine des dieux, épouse de Zeus et protectrice des mariages."
+        },
+        "hades": {
+            "name": "Hadès",
+            "description": "Le dieu des enfers, gardien des âmes et maître de la mort."
+        },
+        "athena": {
+            "name": "Athéna",
+            "description": "La déesse de la sagesse, de la stratégie et de l'artisanat."
+        },
+        "apollo": {
+            "name": "Apollon",
+            "description": "Le dieu du soleil, de la musique et de la prophétie."
+        },
+        "artemis": {
+            "name": "Artemis",
+            "description": "La déesse de la chasse, de la nature et des animaux."
+        },
+        "ares": {
+            "name": "Ares",
+            "description": "Le dieu de la guerre, symbole de la violence et du conflit."
+        },
+        "aphrodite": {
+            "name": "Aphrodite",
+            "description": "La déesse de l'amour, de la beauté et de la sexualité."
+        },
+        "hephaestus": {
+            "name": "Héphaïstos",
+            "description": "Le dieu du feu, de la forge et de l'artisanat."
+        },
+        "hermes": {
+            "name": "Hermès",
+            "description": "Le dieu des voyageurs, des messagers et des voleurs."
+        },
+        "dionysus": {
+            "name": "Dionysos",
+            "description": "Le dieu du vin, de la fête et de la joie."
+        },
+        "demeter": {
+            "name": "Déméter",
+            "description": "La déesse de l'agriculture, de la nature et des récoltes."
+        }
+    }
 }
