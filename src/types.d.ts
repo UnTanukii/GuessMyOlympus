@@ -15,14 +15,14 @@ export interface BotEvent {
 };
 
 
-export type Rarity = "common" | "uncommon" | "rare" | "epic" | "legendary" | "mythical";
+export type CardRarity = "common" | "uncommon" | "rare" | "epic" | "legendary" | "mythical";
 export type CardType = "god" | "hero" | "monster";
-export type Location = "olympus" | "underworld" | "tartarus";
+export type CardLocation = "olympus" | "underworld" | "tartarus";
 export interface Card {
     id: string, 
-    rarity: Rarity,
+    rarity: CardRarity,
     type: CardType,
-    location?: Location
+    location?: CardLocation
 };
 
 declare global {
