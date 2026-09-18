@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Organisation du projet */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Environnement & Résolution des modules */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "types": ["node"],
+
+    /* Transpilation & Sourcemaps */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "isolatedModules": true,
+
+    /* Type-checking strict */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
