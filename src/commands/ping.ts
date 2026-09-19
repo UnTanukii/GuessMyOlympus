@@ -1,19 +1,22 @@
 import { SlashCommandBuilder } from "discord.js";
 import { type Command } from "../types.js";
-import { createCardEmbed, getCardById } from "../cards/index.js";
+import { createCardComponents, getCardById } from "../cards/index.js";
+import { getLocalizedCommand, getDefaultCommand } from "../utils/i18n.js";
 
 const pingCommand: Command = {
     command: new SlashCommandBuilder()
-        .setName("ping")
-        .setDescription("Répond avec Pong !"),
+        .setName(getDefaultCommand("ping", "name"))
+        .setNameLocalizations(getLocalizedCommand("ping", "name"))
+        .setDescription(getDefaultCommand("ping", "description"))
+        .setDescriptionLocalizations(getLocalizedCommand("ping", "description")),
     execute: async (interaction) => {
-        const card = getCardById("zeus");
+        const card = getCardById("poseidon");
         if (!card) {
             await interaction.reply("Carte non trouvée.");
             return;
         }
-        const cardEmbed = createCardEmbed(card, "fr");
-        await interaction.reply({ embeds: [cardEmbed] });
+        const cardComponents = createCardComponents(card, "fr");
+        await interaction.reply(cardComponents);
     },
     cooldown: 10
 };

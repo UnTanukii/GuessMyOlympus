@@ -1,4 +1,10 @@
 {
+    "commands": {
+        "ping": {
+            "name": "ping",
+            "description": "Répond avec Pong !"
+        }
+    },
     "cards": {
         "rarity": {
             "common": "Commun",
