@@ -39,17 +39,17 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "ideal_space",
+    id: "ideal-space",
     answers: [
       {
-        id: "ideal_space.a",
+        id: "ideal-space.a",
         changes: {
           independence: 35,
           sociability: -30
         }
       },
       {
-        id: "ideal_space.b",
+        id: "ideal-space.b",
         changes: {
           sociability: 35,
           creativity: 15,
@@ -57,7 +57,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         }
       },
       {
-        id: "ideal_space.c",
+        id: "ideal-space.c",
         changes: {
           logic: 25,
           authority: 10,
@@ -65,7 +65,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         }
       },
       {
-        id: "ideal_space.d",
+        id: "ideal-space.d",
         changes: {
           creativity: 35,
           independence: 15
@@ -74,10 +74,10 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "ambiguous_task",
+    id: "ambiguous-task",
     answers: [
       {
-        id: "ambiguous_task.a",
+        id: "ambiguous-task.a",
         changes: {
           impulsivity: 25,
           mischief: 20,
@@ -85,21 +85,21 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         }
       },
       {
-        id: "ambiguous_task.b",
+        id: "ambiguous-task.b",
         changes: {
           logic: 35,
           authority: 15
         }
       },
       {
-        id: "ambiguous_task.c",
+        id: "ambiguous-task.c",
         changes: {
           sociability: 25,
           empathyProtection: 25
         }
       },
       {
-        id: "ambiguous_task.d",
+        id: "ambiguous-task.d",
         changes: {
           independence: 35,
           authority: 15
@@ -142,10 +142,10 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "unexpected_obstacle",
+    id: "unexpected-obstacle",
     answers: [
       {
-        id: "unexpected_obstacle.a",
+        id: "unexpected-obstacle.a",
         changes: {
           impulsivity: 35,
           authority: 15,
@@ -153,21 +153,21 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         }
       },
       {
-        id: "unexpected_obstacle.b",
+        id: "unexpected-obstacle.b",
         changes: {
           mischief: 30,
           creativity: 25
         }
       },
       {
-        id: "unexpected_obstacle.c",
+        id: "unexpected-obstacle.c",
         changes: {
           logic: 30,
           impulsivity: -20
         }
       },
       {
-        id: "unexpected_obstacle.d",
+        id: "unexpected-obstacle.d",
         changes: {
           authority: 25,
           independence: 20
@@ -176,31 +176,31 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "social_event",
+    id: "social-event",
     answers: [
       {
-        id: "social_event.a",
+        id: "social-event.a",
         changes: {
           sociability: 35,
           creativity: 15
         }
       },
       {
-        id: "social_event.b",
+        id: "social-event.b",
         changes: {
           empathyProtection: 30,
           sociability: 10
         }
       },
       {
-        id: "social_event.c",
+        id: "social-event.c",
         changes: {
           independence: 25,
           sociability: -25
         }
       },
       {
-        id: "social_event.d",
+        id: "social-event.d",
         changes: {
           mischief: 30,
           sociability: 15
@@ -209,30 +209,30 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "daily_expression",
+    id: "daily-expression",
     answers: [
       {
-        id: "daily_expression.a",
+        id: "daily-expression.a",
         changes: {
           creativity: 35
         }
       },
       {
-        id: "daily_expression.b",
+        id: "daily-expression.b",
         changes: {
           authority: 30,
           independence: 10
         }
       },
       {
-        id: "daily_expression.c",
+        id: "daily-expression.c",
         changes: {
           logic: 20,
           empathyProtection: 20
         }
       },
       {
-        id: "daily_expression.d",
+        id: "daily-expression.d",
         changes: {
           mischief: 35,
           sociability: 15
@@ -241,30 +241,30 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
     ]
   },
   {
-    id: "greatest_strength",
+    id: "greatest-strength",
     answers: [
       {
-        id: "greatest_strength.a",
+        id: "greatest-strength.a",
         changes: {
           empathyProtection: 35
         }
       },
       {
-        id: "greatest_strength.b",
+        id: "greatest-strength.b",
         changes: {
           logic: 35,
           impulsivity: -20
         }
       },
       {
-        id: "greatest_strength.c",
+        id: "greatest-strength.c",
         changes: {
           impulsivity: 30,
           authority: 10
         }
       },
       {
-        id: "greatest_strength.d",
+        id: "greatest-strength.d",
         changes: {
           mischief: 25,
           creativity: 20,

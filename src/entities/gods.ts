@@ -7,7 +7,7 @@ export const gods: Entity[] = [
     personnality: {
       authority: 95,
       logic: 60,
-      impulsivity: 80,
+      impulsivity: 90,
       sociability: 70,
       independence: 80,
       mischief: 60,

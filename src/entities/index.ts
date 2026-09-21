@@ -1,7 +1,7 @@
-import { EmbedBuilder, AttachmentBuilder, APIEmbed, JSONEncodable, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } from "discord.js";
+import { EmbedBuilder, AttachmentBuilder, APIEmbed, JSONEncodable, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, Snowflake } from "discord.js";
 import { getThemeColor } from "../utils/functions.js";
-import { t, TSupportedLanguages, formatLocale } from "../utils/i18n.js";
-import { Entity } from "../types.js";
+import { t, formatLocale } from "../utils/i18n.js";
+import { Entity, PersonnalityQuestion } from "../types.js";
 import { gods } from "./gods.js";
 import { personnalityQuestions } from "./questions.js";
 
@@ -15,18 +15,79 @@ export function getEntityById(id: string): Entity | undefined {
     return entitiesMap.get(id);
 };
 
-export function createEntityComponents(entity: Entity, locale: string): { embeds: JSONEncodable<APIEmbed>[]; files: AttachmentBuilder[] } {
+export function createWaitingResultComponents(locale: string): { embeds: JSONEncodable<APIEmbed>[], components: any[] } {
+    const formattedLocale = formatLocale(locale);
+    const cardEmbed = new EmbedBuilder()
+        .setColor(getThemeColor("text"))
+        .setDescription(t(formattedLocale, 'personnality.fields.waiting_result'));
+    return { embeds: [cardEmbed], components: [] };
+};
+
+export function createEntityResultComponents(entity: Entity, locale: string): { embeds: JSONEncodable<APIEmbed>[], files: AttachmentBuilder[], components: any[] } {
     const formattedLocale = formatLocale(locale);
     const cardImage = new AttachmentBuilder(`./src/assets/entities/${entity.id}.png`, { name: `${entity.id}.png` });
     const cardEmbed = new EmbedBuilder()
         .setColor(getThemeColor("text"))
         .setTitle(t(formattedLocale, `entities.${entity.id}.name`))
-        .setDescription(t(formattedLocale, `entities.${entity.id}.description`))
+        .setDescription(t(formattedLocale, `personnality.fields.result`, { entityName: t(formattedLocale, `entities.${entity.id}.name`), entityDescription: t(formattedLocale, `entities.${entity.id}.description`) }))
         .setImage(`attachment://${entity.id}.png`)
-        .addFields(
-            { name: t(formattedLocale, "entities.fields.type"), value: t(formattedLocale, `entities.type.${entity.type}`), inline: false },
-        );
-    return { embeds: [cardEmbed], files: [cardImage] };
+        .setFooter({ text: t(formattedLocale, "personnality.fields.result_footer") });
+    return { embeds: [cardEmbed], files: [cardImage], components: [] };
+};
+
+export function findQuestionById(id: string): PersonnalityQuestion | undefined {
+    return personnalityQuestions.find(question => question.id === id);
+};
+
+export function findAnswerById(question: PersonnalityQuestion, answerId: string) {
+    return question.answers.find(answer => answer.id === answerId);
+};
+
+const usersProfiles = new Map<string, { [key: string]: number }>();
+export function calculateQuestionChanges(userId: Snowflake, questionId: string, answerId: string) {
+    const question = findQuestionById(questionId);
+    if (!question) {
+        throw new Error(`Question with ID ${questionId} not found`);
+    }
+    const answer = findAnswerById(question, answerId);
+    if (!answer) {
+        throw new Error(`Answer with ID ${answerId} not found for question ${question.id}`);
+    };
+    usersProfiles.set(userId, usersProfiles.get(userId) || {});
+    const userProfile = usersProfiles.get(userId)!;
+    for (const [trait, change] of Object.entries(answer.changes)) {
+        if (change !== undefined) {
+            userProfile[trait] = (userProfile[trait] || 0) + change;
+        };
+    };
+    return;
+};
+
+export function calculateClosestEntity(userId: Snowflake): Entity | undefined {
+    const userProfile = usersProfiles.get(userId);
+    if (!userProfile) {
+        return undefined;
+    };
+
+    let closestEntity = entities[0];
+    let closestDistance = Infinity;
+
+    for (const entity of entities) {
+        let distance = 0;
+
+        for (const trait in entity.personnality) {
+            const entityTraitValue = entity.personnality[trait as keyof typeof entity.personnality];
+            const userTraitValue = userProfile[trait] || 0;
+            distance += Math.pow(entityTraitValue - userTraitValue, 2);
+        };
+        distance = Math.sqrt(distance);
+        
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestEntity = entity;
+        };
+    };
+    return closestEntity;
 };
 
 export function createQuestionComponents(questionNb: number, locale: string): { embeds: JSONEncodable<APIEmbed>[]; components: any[] } {
@@ -51,6 +112,6 @@ export function createQuestionComponents(questionNb: number, locale: string): { 
 
     const questionEmbed = new EmbedBuilder()
         .setColor(getThemeColor("text"))
-        .setTitle(`#${questionNb + 1} - ${t(formattedLocale, `personnality.questions.${question.id}`)}`);
+        .setTitle(`${questionNb + 1}/${personnalityQuestions.length} - ${t(formattedLocale, `personnality.questions.${question.id}`)}`);
     return { embeds: [questionEmbed], components: [row] };
 };

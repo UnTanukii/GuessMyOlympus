@@ -22,71 +22,74 @@
 
         "zeus": {
             "name": "Zeus",
-            "description": "The king of the gods, master of the sky and thunder."
+            "description": "**Zeus** is the king of the gods, master of the sky and thunder. He has a strong personality and is often associated with justice and order. ⚡️"
         },
         "poseidon": {
             "name": "Poseidon",
-            "description": "The god of the sea, capable of causing storms and earthquakes."
+            "description": "**Poseidon** is the god of the sea, capable of causing storms and earthquakes. He has a passionate personality and is often associated with strength and power. 🌊"
         },
         "hera": {
             "name": "Hera",
-            "description": "The queen of the gods, wife of Zeus and protector of marriage."
+            "description": "**Hera** is the queen of the gods, wife of Zeus, and protector of marriage. She has a proud personality and is often associated with fidelity and family. 👑"
         },
         "hades": {
             "name": "Hades",
-            "description": "The god of the underworld, guardian of souls and ruler of death."
+            "description": "**Hades** is the god of the underworld, guardian of souls, and ruler of death. He has a mysterious personality and is often associated with wealth and wisdom. 💀"
         },
         "athena": {
             "name": "Athena",
-            "description": "The goddess of wisdom, warfare strategy, and crafts."
+            "description": "**Athena** is the goddess of wisdom, warfare strategy, and crafts. She has a thoughtful personality and is often associated with justice and protection. 🦉"
         },
         "apollo": {
             "name": "Apollo",
-            "description": "The god of the sun, music, and prophecy."
+            "description": "**Apollo** is the god of the sun, music, and prophecy. He has a charismatic personality and is often associated with beauty and harmony. 🎵"
         },
         "artemis": {
             "name": "Artemis",
-            "description": "The goddess of the hunt, wilderness, and wild animals."
+            "description": "**Artemis** is the goddess of the hunt, wilderness, and wild animals. She has an independent personality and is often associated with freedom and nature protection. 🏹"
         },
         "ares": {
             "name": "Ares",
-            "description": "The god of war, representing violence and conflict."
+            "description": "**Ares** is the god of war, representing violence and conflict. He has an aggressive personality and is often associated with strength and bravery. ⚔️"
         },
         "aphrodite": {
             "name": "Aphrodite",
-            "description": "The goddess of love, beauty, and desire."
+            "description": "**Aphrodite** is the goddess of love, beauty, and desire. She has a charismatic personality and is often associated with attraction and inspiration. ❤️"
         },
         "hephaestus": {
             "name": "Hephaestus",
-            "description": "The god of fire, metalworking, and crafts."
+            "description": "**Hephaestus** is the god of fire, the forge, and metallurgy. He has a creative personality and is often associated with ingenuity and perseverance. 🔥"
         },
         "hermes": {
             "name": "Hermes",
-            "description": "The god of travelers, messengers, and thieves."
+            "description": "**Hermes** is the god of commerce, travel, and thieves. He has a cunning personality and is often associated with communication and resourcefulness. 🕊️"
         },
         "dionysus": {
             "name": "Dionysus",
-            "description": "The god of wine, festivity, and joy."
+            "description": "**Dionysus** is the god of wine, festivity, and joy. He has a cheerful personality and is often associated with creativity and intoxication. 🍷"
         },
         "demeter": {
             "name": "Demeter",
-            "description": "The goddess of agriculture, nature, and the harvest."
+            "description": "**Demeter** is the goddess of agriculture, nature, and the harvest. She has a benevolent personality and is often associated with fertility and growth. 🌾"
         }
     },
     "personnality": {
         "fields": {
             "answer": "Answer {{answer}}",
-            "answer_placeholder": "Select an answer..."
+            "answer_placeholder": "Select an answer...",
+            "waiting_result": "**Waiting for results...**",
+            "result": "Based on your answers, your personality matches **{{entityName}}** the most!\n\n{{entityDescription}}",
+            "result_footer": "Quick disclaimer: this test is purely fictional and does not reflect reality. It is intended for entertainment purposes only (mostly because I get bored in lectures)"
         },
         "questions": {
             "conflict": "A conflict breaks out in your friend group. How do you react?",
-            "ideal_space": "What is your ideal workspace or living area?",
-            "ambiguous_task": "You are given an important mission with very few instructions. What do you do?",
+            "ideal-space": "What is your ideal workspace or living area?",
+            "ambiguous-task": "You are given an important mission with very few instructions. What do you do?",
             "support": "When faced with someone who is struggling or in distress:",
-            "unexpected_obstacle": "What is your strategy when facing an unexpected obstacle?",
-            "social_event": "At a party or social gathering:",
-            "daily_expression": "How do you express your personality in daily life?",
-            "greatest_strength": "What is your greatest strength according to those close to you?"
+            "unexpected-obstacle": "What is your strategy when facing an unexpected obstacle?",
+            "social-event": "At a party or social gathering:",
+            "daily-expression": "How do you express your personality in daily life?",
+            "greatest-strength": "What is your greatest strength according to those close to you?"
         },
         "answers": {
             "conflict": {
@@ -95,13 +98,13 @@
                 "c": "I let my anger explode—I need to vent.",
                 "d": "I try to lighten the mood with humor and a clever distraction."
             },
-            "ideal_space": {
+            "ideal-space": {
                 "a": "An isolated, quiet place where nobody disturbs me.",
                 "b": "A lively spot surrounded by people, music, and activity.",
                 "c": "An ultra-organized, functional space where everything has its place.",
                 "d": "A creative studio or workshop filled with ongoing projects."
             },
-            "ambiguous_task": {
+            "ambiguous-task": {
                 "a": "I improvise on the spot based on my intuition.",
                 "b": "I set up a rigorous strategic plan before laying the first brick.",
                 "c": "I ask for the group's input so we can move forward together.",
@@ -113,25 +116,25 @@
                 "c": "It makes me uncomfortable; I prefer to keep my distance.",
                 "d": "I use clever tricks or my contacts to solve their problem behind the scenes."
             },
-            "unexpected_obstacle": {
+            "unexpected-obstacle": {
                 "a": "Brute force and direct confrontation.",
                 "b": "Find a creative workaround or a loophole in the system.",
                 "c": "Coldly reassess the situation and adjust my approach.",
                 "d": "Stand my ground and wait for the obstacle to give way."
             },
-            "social_event": {
+            "social-event": {
                 "a": "I am the center of attention and the life of the party.",
                 "b": "I stay with a few close friends to make sure everyone is doing well.",
                 "c": "I prefer to observe from a quiet corner.",
                 "d": "I like to throw out playful challenges or tease people."
             },
-            "daily_expression": {
+            "daily-expression": {
                 "a": "Through art, style, music, or writing.",
                 "b": "Through my achievements, my position, and my successes.",
                 "c": "Through my sense of justice and fairness.",
                 "d": "Through my humor, my stories, and my boldness."
             },
-            "greatest_strength": {
+            "greatest-strength": {
                 "a": "Your loyalty and your ability to care for others.",
                 "b": "Your composure and tactical intelligence.",
                 "c": "Your boundless energy and limitless boldness.",

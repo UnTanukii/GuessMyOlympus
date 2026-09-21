@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "discord.js";
 import { type Command } from "../types.js";
-import { createEntityComponents, getEntityById } from "../entities/index.js";
+import { createEntityResultComponents, getEntityById } from "../entities/index.js";
 import { getLocalizedCommand, getDefaultCommand } from "../utils/i18n.js";
 
 const pingCommand: Command = {
@@ -15,7 +15,7 @@ const pingCommand: Command = {
             await interaction.reply("Entité non trouvée.");
             return;
         }
-        const cardComponents = createEntityComponents(card, "fr");
+        const cardComponents = createEntityResultComponents(card, "fr");
         await interaction.reply(cardComponents);
     },
     cooldown: 10
