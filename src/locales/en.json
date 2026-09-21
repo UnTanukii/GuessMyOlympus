@@ -22,55 +22,91 @@
 
         "zeus": {
             "name": "Zeus",
-            "description": "**Zeus** is the king of the gods, master of the sky and thunder. He has a strong personality and is often associated with justice and order. ⚡️"
+            "description": "**Zeus** is the king of the gods, ruler of Olympus, and master of the sky. He has a dominant, impulsive, and charismatic personality, always ready to enforce his authority. ⚡️"
         },
         "poseidon": {
             "name": "Poseidon",
-            "description": "**Poseidon** is the god of the sea, capable of causing storms and earthquakes. He has a passionate personality and is often associated with strength and power. 🌊"
+            "description": "**Poseidon** is the god of the oceans, creator of storms and earthquakes. He has an impetuous, passionate, and vengeful personality, driven by raw emotions. 🌊"
         },
         "hera": {
             "name": "Hera",
-            "description": "**Hera** is the queen of the gods, wife of Zeus, and protector of marriage. She has a proud personality and is often associated with fidelity and family. 👑"
+            "description": "**Hera** is the queen of the gods and protector of the home and marriage. She has a proud, strategic, and unyielding personality when it comes to defending her status and principles. 👑"
         },
         "hades": {
             "name": "Hades",
-            "description": "**Hades** is the god of the underworld, guardian of souls, and ruler of death. He has a mysterious personality and is often associated with wealth and wisdom. 💀"
+            "description": "**Hades** is the master of the underworld and buried riches. He has a solitary, highly logical, and stoic personality, preferring the shadows to the light. 💀"
         },
         "athena": {
             "name": "Athena",
-            "description": "**Athena** is the goddess of wisdom, warfare strategy, and crafts. She has a thoughtful personality and is often associated with justice and protection. 🦉"
+            "description": "**Athena** is the goddess of wisdom and military strategy. She has a thoughtful, methodical, and calm personality, constantly seeking the most just and rational solution. 🦉"
         },
         "apollo": {
             "name": "Apollo",
-            "description": "**Apollo** is the god of the sun, music, and prophecy. He has a charismatic personality and is often associated with beauty and harmony. 🎵"
+            "description": "**Apollo** is the god of light, music, and the arts. He has a radiant, creative, and perfectionist personality, driven by the pursuit of harmony and excellence. 🎵"
         },
         "artemis": {
             "name": "Artemis",
-            "description": "**Artemis** is the goddess of the hunt, wilderness, and wild animals. She has an independent personality and is often associated with freedom and nature protection. 🏹"
+            "description": "**Artemis** is the goddess of the hunt, the wilderness, and the moon. She has a fiercely independent personality, protective of her own, and detached from artificiality. 🏹"
         },
         "ares": {
             "name": "Ares",
-            "description": "**Ares** is the god of war, representing violence and conflict. He has an aggressive personality and is often associated with strength and bravery. ⚔️"
+            "description": "**Ares** is the god of brutal war and the chaos of battle. He has an explosive, reckless, and headstrong personality, never backing down from a conflict. ⚔️"
         },
         "aphrodite": {
             "name": "Aphrodite",
-            "description": "**Aphrodite** is the goddess of love, beauty, and desire. She has a charismatic personality and is often associated with attraction and inspiration. ❤️"
+            "description": "**Aphrodite** is the goddess of beauty, seduction, and love. She has a captivating, expressive, and at times fickle personality, fully aware of her power of attraction. ❤️"
         },
         "hephaestus": {
             "name": "Hephaestus",
-            "description": "**Hephaestus** is the god of fire, the forge, and metallurgy. He has a creative personality and is often associated with ingenuity and perseverance. 🔥"
+            "description": "**Hephaestus** is the god of fire, craftsmen, and the Olympus forges. He has a persevering, ingenious, and reserved personality, expressing himself through his creations. 🔥"
         },
         "hermes": {
             "name": "Hermes",
-            "description": "**Hermes** is the god of commerce, travel, and thieves. He has a cunning personality and is often associated with communication and resourcefulness. 🕊️"
+            "description": "**Hermes** is the messenger of the gods and protector of travelers and tricksters. He has a sharp, mischievous, and highly adaptable personality, capable of wiggling out of any situation. 🕊️"
         },
         "dionysus": {
             "name": "Dionysus",
-            "description": "**Dionysus** is the god of wine, festivity, and joy. He has a cheerful personality and is often associated with creativity and intoxication. 🍷"
+            "description": "**Dionysus** is the god of wine, theater, and letting go. He has an epicurean, festive, and unconventional personality, bringing energy and wildness wherever he goes. 🍷"
         },
         "demeter": {
             "name": "Demeter",
-            "description": "**Demeter** is the goddess of agriculture, nature, and the harvest. She has a benevolent personality and is often associated with fertility and growth. 🌾"
+            "description": "**Demeter** is the goddess of the earth, nature, and harvests. She has a deeply empathetic, benevolent, and protective personality, willing to do anything for her loved ones. 🌾"
+        },
+        "hercules": {
+            "name": "Hercules",
+            "description": "**Hercules** is a demigod of superhuman strength, famous for his Twelve Labors. He has a courageous, impulsive personality, always ready to protect those he cares about. 🦁"
+        },
+        "achilles": {
+            "name": "Achilles",
+            "description": "**Achilles** is the greatest warrior of the Trojan War, invulnerable except for his heel. He has a proud, passionate, and highly intense personality. 🗡️"
+        },
+        "odysseus": {
+            "name": "Odysseus",
+            "description": "**Odysseus** is the king of Ithaca renowned for his cunning, strategic mind, and long journey in the Odyssey. He has an extremely resourceful and persistent personality. ⛵"
+        },
+        "perseus": {
+            "name": "Perseus",
+            "description": "**Perseus** is the slayer of the Gorgon Medusa and savior of Andromeda. He has a resourceful, thoughtful personality guided by a strong sense of justice. 🛡️"
+        },
+        "medusa": {
+            "name": "Medusa",
+            "description": "**Medusa** is a Gorgon with a petrifying gaze and living snakes for hair. She has a distrustful, deeply solitary, and defensive personality, shaped by her tragic past. 🐍"
+        },
+        "minotaur": {
+            "name": "The Minotaur",
+            "description": "**The Minotaur** is a half-man, half-bull monster trapped at the center of the Labyrinth. He has a brutal, impulsive personality driven by fierce and untamed instincts. 🐂"
+        },
+        "cerberus": {
+            "name": "Cerberus",
+            "description": "**Cerberus** is the three-headed hound guarding the Underworld. He has a fiercely loyal, incorruptible, and overprotective personality regarding his domain and master. 🐕"
+        },
+        "sphinx": {
+            "name": "The Sphinx",
+            "description": "**The Sphinx** is a winged creature with a lion's body who devours those unable to answer her riddles. She has a mysterious, highly intellectual, and playful personality. 🦁"
+        },
+        "sirens": {
+            "name": "The Sirens",
+            "description": "**The Sirens** are creatures with enchanting voices that lure sailors to their doom against the rocks. They have a seductive, manipulative, and mischievous personality, using charm to get what they want. 🧜‍♀️"
         }
     },
     "personnality": {

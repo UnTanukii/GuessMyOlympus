@@ -1,15 +1,15 @@
 import { PersonnalityQuestion } from "../types";
 
 export const personnalityQuestions: PersonnalityQuestion[] = [
-{
+  {
     id: "conflict",
     answers: [
       {
         id: "conflict.a",
         changes: {
           authority: 35,
-          impulsivity: 15,
-          logic: -10
+          impulsivity: 25,
+          logic: -15
         }
       },
       {
@@ -31,7 +31,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "conflict.d",
         changes: {
-          independence: 30,
+          independence: 35,
           sociability: -25
         }
       }
@@ -58,8 +58,8 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "ideal-space.c",
         changes: {
-          logic: 25,
-          authority: 10,
+          logic: 30,
+          authority: 15,
           impulsivity: -15
         }
       },
@@ -78,7 +78,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "ambiguous-task.a",
         changes: {
-          impulsivity: 25,
+          impulsivity: 30,
           mischief: 20,
           logic: -15
         }
@@ -119,7 +119,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "support.b",
         changes: {
-          logic: 25,
+          logic: 30,
           independence: 15,
           empathyProtection: 5
         }
@@ -127,7 +127,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "support.c",
         changes: {
-          independence: 20,
+          independence: 25,
           sociability: -25
         }
       },
@@ -135,7 +135,8 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         id: "support.d",
         changes: {
           mischief: 30,
-          creativity: 15
+          creativity: 15,
+          independence: 15
         }
       }
     ]
@@ -169,7 +170,8 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
         id: "unexpected-obstacle.d",
         changes: {
           authority: 25,
-          independence: 20
+          independence: 20,
+          logic: 15
         }
       }
     ]
@@ -187,14 +189,14 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "social-event.b",
         changes: {
-          empathyProtection: 30,
+          empathyProtection: 35,
           sociability: 10
         }
       },
       {
         id: "social-event.c",
         changes: {
-          independence: 25,
+          independence: 30,
           sociability: -25
         }
       },
@@ -213,7 +215,8 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "daily-expression.a",
         changes: {
-          creativity: 35
+          creativity: 35,
+          independence: 15
         }
       },
       {
@@ -226,7 +229,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "daily-expression.c",
         changes: {
-          logic: 20,
+          logic: 25,
           empathyProtection: 20
         }
       },
@@ -258,7 +261,7 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "greatest-strength.c",
         changes: {
-          impulsivity: 30,
+          impulsivity: 35,
           authority: 10
         }
       },
@@ -278,8 +281,9 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
       {
         id: "failure-reaction.a",
         changes: {
-          impulsivity: 30,
-          authority: 15
+          impulsivity: 35,
+          authority: 15,
+          mischief: 10
         }
       },
       {

@@ -5,8 +5,9 @@ import { Entity, PersonnalityQuestion } from "../types.js";
 import { personnalityQuestions } from "./questions.js";
 import { gods } from "./gods.js";
 import { heroes } from "./heroes.js";
+import { monsters } from "./monsters.js";
 
-export const entities: Entity[] = [...gods, ...heroes];
+export const entities: Entity[] = [...gods, ...heroes, ...monsters];
 
 export const entitiesMap = new Map<string, Entity>(
     entities.map(entity => [entity.id, entity])

@@ -87,6 +87,26 @@
         "perseus": {
             "name": "Persée",
             "description": "**Persée** est le tueur de la Gorgone Méduse et le sauveur d'Andromède. Il a une personnalité débrouillarde, réfléchie et guidée par un fort sens de la justice. 🛡️"
+        },
+        "medusa": {
+            "name": "Méduse",
+            "description": "**Méduse** est une Gorgone au regard pétrifiant et à la chevelure de serpents. Elle a une personnalité méfiante, profondément solitaire et défensive, marquée par son histoire tragique. 🐍"
+        },
+        "minotaur": {
+            "name": "Le Minotaure",
+            "description": "**Le Minotaure** est un monstre mi-homme mi-taureau enfermé au cœur du Labyrinthe. Il a une personnalité brutale, impulsive et guidée par un instinct féroce et indomptable. 🐂"
+        },
+        "cerberus": {
+            "name": "Cerbère",
+            "description": "**Cerbère** est le chien à trois têtes gardien des Enfers. Il a une personnalité farouchement loyale, incorruptible et surprotectrice envers son territoire et son maître. 🐕"
+        },
+        "sphinx": {
+            "name": "La Sphinx",
+            "description": "**La Sphinx** est une créature ailée au corps de lion qui dévore ceux qui échouent à ses énigmes. Elle a une personnalité mystérieuse, hautement intellectuelle et joueuse. 🦁"
+        },
+        "sirens": {
+            "name": "Les Sirènes",
+            "description": "**Les Sirènes** sont des créatures au chant envoûtant qui attirent les marins vers les récifs. Elles ont une personnalité séduisante, manipulatrice et espiègle, usant du charme pour arriver à leurs fins. 🧜‍♀️"
         }
     },
     "personnality": {
