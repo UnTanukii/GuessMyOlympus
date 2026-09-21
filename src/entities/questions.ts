@@ -1,39 +1,38 @@
 import { PersonnalityQuestion } from "../types";
 
 export const personnalityQuestions: PersonnalityQuestion[] = [
-  {
+{
     id: "conflict",
     answers: [
       {
         id: "conflict.a",
         changes: {
-          authority: 30,
-          logic: 10,
-          impulsivity: 10
+          authority: 35,
+          impulsivity: 15,
+          logic: -10
         }
       },
       {
         id: "conflict.b",
         changes: {
-          logic: 30,
-          impulsivity: -20,
-          authority: 10
+          logic: 35,
+          empathyProtection: 15,
+          impulsivity: -20
         }
       },
       {
         id: "conflict.c",
         changes: {
-          impulsivity: 35,
-          logic: -20,
-          sociability: -10
+          mischief: 30,
+          creativity: 20,
+          authority: -10
         }
       },
       {
         id: "conflict.d",
         changes: {
-          mischief: 30,
-          sociability: 20,
-          creativity: 10
+          independence: 30,
+          sociability: -25
         }
       }
     ]
@@ -269,6 +268,72 @@ export const personnalityQuestions: PersonnalityQuestion[] = [
           mischief: 25,
           creativity: 20,
           independence: 10
+        }
+      }
+    ]
+  },
+  {
+    id: "failure-reaction",
+    answers: [
+      {
+        id: "failure-reaction.a",
+        changes: {
+          impulsivity: 30,
+          authority: 15
+        }
+      },
+      {
+        id: "failure-reaction.b",
+        changes: {
+          logic: 35,
+          creativity: 15
+        }
+      },
+      {
+        id: "failure-reaction.c",
+        changes: {
+          mischief: 30,
+          independence: 15
+        }
+      },
+      {
+        id: "failure-reaction.d",
+        changes: {
+          empathyProtection: 25,
+          sociability: 20
+        }
+      }
+    ]
+  },
+  {
+    id: "unknown-place",
+    answers: [
+      {
+        id: "unknown-place.a",
+        changes: {
+          independence: 35,
+          mischief: 15
+        }
+      },
+      {
+        id: "unknown-place.b",
+        changes: {
+          logic: 30,
+          authority: 15
+        }
+      },
+      {
+        id: "unknown-place.c",
+        changes: {
+          sociability: 35,
+          empathyProtection: 10
+        }
+      },
+      {
+        id: "unknown-place.d",
+        changes: {
+          creativity: 30,
+          impulsivity: 15
         }
       }
     ]

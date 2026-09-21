@@ -22,55 +22,71 @@
 
         "zeus": {
             "name": "Zeus",
-            "description": "**Zeus** est le roi des dieux, maître du ciel et de la foudre. Il a une personnalité forte et est souvent associé à la justice et à l'ordre. ⚡️"
+            "description": "**Zeus** est le roi des dieux, souverain de l'Olympe et maître du ciel. Il a une personnalité dominante, impulsive et charismatique, toujours prêt à imposer son autorité. ⚡️"
         },
         "poseidon": {
             "name": "Poséidon",
-            "description": "**Poséidon** est le dieu des mers, capable de provoquer des tempêtes et des tremblements de terre. Il a une personnalité passionnée et est souvent associé à la force et à la puissance. 🌊"
+            "description": "**Poséidon** est le dieu des océans, créateur des tempêtes et des séismes. Il a une personnalité impétueuse, passionnée et rancunière, guidée par des émotions brutes. 🌊"
         },
         "hera": {
             "name": "Héra",
-            "description": "**Héra** est la reine des dieux, épouse de Zeus et protectrice du mariage. Elle a une personnalité fière et est souvent associée à la fidélité et à la famille. 👑"
+            "description": "**Héra** est la reine des dieux et la protectrice du foyer et du mariage. Elle a une personnalité fière, stratégique et inflexible quand il s'agit de défendre son rang et ses principes. 👑"
         },
         "hades": {
             "name": "Hadès",
-            "description": "**Hadès** est le dieu des enfers, gardien des âmes et maître de la mort. Il a une personnalité mystérieuse et est souvent associé à la richesse et à la sagesse. 💀"
+            "description": "**Hadès** est le maître du royaume des morts et des richesses enfouies. Il a une personnalité solitaire, extrêmement logique et stoïque, préférant l'ombre à la lumière. 💀"
         },
         "athena": {
             "name": "Athéna",
-            "description": "**Athéna** est la déesse de la sagesse, de la stratégie et de l'artisanat. Elle a une personnalité réfléchie et est souvent associée à la justice et à la protection. 🦉"
+            "description": "**Athéna** est la déesse de la sagesse et de la stratégie militaire. Elle a une personnalité réfléchie, méthodique et calme, recherchant toujours la solution la plus juste et rationnelle. 🦉"
         },
         "apollo": {
             "name": "Apollon",
-            "description": "**Apollon** est le dieu du soleil, de la musique et de la prophétie. Il a une personnalité charismatique et est souvent associé à la beauté et à l'harmonie. 🎵"
+            "description": "**Apollon** est le dieu de la lumière, de la musique et des arts. Il a une personnalité rayonnante, créative et perfectionniste, portée par la recherche d'harmonie et d'excellence. 🎵"
         },
         "artemis": {
             "name": "Artemis",
-            "description": "**Artemis** est la déesse de la chasse, de la nature et des animaux sauvages. Elle a une personnalité indépendante et est souvent associée à la liberté et à la protection de la nature. 🏹"
+            "description": "**Artemis** est la déesse de la chasse, du monde sauvage et de la lune. Elle a une personnalité férocement indépendante, protectrice envers les siens et détachée des artifices. 🏹"
         },
         "ares": {
             "name": "Ares",
-            "description": "**Ares** est le dieu de la guerre, représentant la violence et le conflit. Il a une personnalité agressive et est souvent associé à la force et à la bravoure. ⚔️"
+            "description": "**Ares** est le dieu de la guerre brutale et du chaos des combats. Il a une personnalité explosive, intempestive et fonceuse, ne reculant devant aucun affrontement. ⚔️"
         },
         "aphrodite": {
             "name": "Aphrodite",
-            "description": "**Aphrodite** est la déesse de l'amour, de la beauté et de la sexualité. Elle a une personnalité charismatique et est souvent associée à l'attraction et à l'inspiration. ❤️"
+            "description": "**Aphrodite** est la déesse de la beauté, de la séduction et de l'amour. Elle a une personnalité captivante, expressive et parfois capricieuse, consciente de son pouvoir d'attraction. ❤️"
         },
         "hephaestus": {
             "name": "Héphaïstos",
-            "description": "**Héphaïstos** est le dieu du feu, de la forge et de la métallurgie. Il a une personnalité créative et est souvent associé à l'ingéniosité et à la persévérance. 🔥"
+            "description": "**Héphaïstos** est le dieu du feu, des artisans et des forges de l'Olympe. Il a une personnalité persévérante, ingénieuse et réservée, s'exprimant à travers ses créations. 🔥"
         },
         "hermes": {
             "name": "Hermès",
-            "description": "**Hermès** est le dieu du commerce, des voyages et des voleurs. Il a une personnalité rusée et est souvent associé à la communication et à l'ingéniosité. 🕊️"
+            "description": "**Hermès** est le messager des dieux et le protecteur des voyageurs et des filous. Il a une personnalité vive, espiègle et hyperadaptable, capable de se sortir de n'importe quelle situation. 🕊️"
         },
         "dionysus": {
             "name": "Dionysos",
-            "description": "**Dionysos** est le dieu du vin, de la fête et de la joie. Il a une personnalité joyeuse et est souvent associé à la créativité et à l'ivresse. 🍷"
+            "description": "**Dionysos** est le dieu du vin, du théâtre et du lâcher-prise. Il a une personnalité épicurienne, festive et anticonformiste, apportant énergie et folie partout où il passe. 🍷"
         },
         "demeter": {
             "name": "Déméter",
-            "description": "**Déméter** est la déesse de l'agriculture, de la nature et des récoltes. Elle a une personnalité bienveillante et est souvent associée à la fertilité et à la croissance. 🌾"
+            "description": "**Déméter** est la déesse de la terre nourricière et des récoltes. Elle a une personnalité profondément empathique, bienveillante et protectrice, prête à tout pour le bien-être des siens. 🌾"
+        },
+        "hercules": {
+            "name": "Hercule",
+            "description": "**Hercule** est un demi-dieu d'une force surhumaine, célèbre pour ses Douze Travaux. Il a une personnalité courageuse et impulsive, toujours prêt à protéger ses proches. 🦁"
+        },
+        "achilles": {
+            "name": "Achille",
+            "description": "**Achille** est le plus grand guerrier de la guerre de Troie, invulnérable à l'exception de son talon. Il a une personnalité fière, passionnée et hautement réactive. 🗡️"
+        },
+        "odysseus": {
+            "name": "Ulysse",
+            "description": "**Ulysse** est le roi d'Ithaque célèbre pour sa ruse, son esprit stratège et son long voyage dans l'Odyssée. Il a une personnalité extrêmement ingénieuse et tenace. ⛵"
+        },
+        "perseus": {
+            "name": "Persée",
+            "description": "**Persée** est le tueur de la Gorgone Méduse et le sauveur d'Andromède. Il a une personnalité débrouillarde, réfléchie et guidée par un fort sens de la justice. 🛡️"
         }
     },
     "personnality": {
@@ -82,21 +98,23 @@
             "result_footer": "Petit disclaimer : ce test est purement fictif et ne reflète pas la réalité. Il est destiné à des fins de divertissement uniquement (et surtout parce que je m'ennuie en amphi)"
         },
         "questions": {
-            "conflict": "Un conflit éclate au sein de ton groupe d'amis. Comment réagis-tu ?",
+            "conflict": "Face à une dispute ouverte, quel est ton premier réflexe ?",
             "ideal-space": "Quel est ton espace de travail ou de vie idéal ?",
             "ambiguous-task": "On te confie une mission importante avec peu de directives. Que fais-tu ?",
             "support": "Face à quelqu'un qui est dans la difficulté ou la détresse :",
             "unexpected-obstacle": "Quelle est ta stratégie face à un obstacle imprévu ?",
             "social-event": "Lors d'une soirée ou d'un rassemblement social :",
             "daily-expression": "Comment exprimes-tu ta personnalité au quotidien ?",
-            "greatest-strength": "Quelle est ta plus grande force selon tes proches ?"
+            "greatest-strength": "Quelle est ta plus grande force selon tes proches ?",
+            "failure-reaction": "Comment réagis-tu après un échec cuisant sur un projet ?",
+            "unknown-place": "Tu te retrouves parachuté(e) dans un endroit totalement inconnu, que fais-tu ?"
         },
         "answers": {
             "conflict": {
-                "a": "Je prends les commandes immédiatement et j'impose la décision finale.",
-                "b": "J'analyse calmement les faits pour proposer la solution la plus rationnelle.",
-                "c": "Je laisse exploser ma colère, il faut que ça sorte.",
-                "d": "J'essaie de détendre l'atmosphère avec de l'humour et une feinte diversion."
+                "a": "Je hausse le ton pour imposer immédiatement le calme et imposer mon autorité.",
+                "b": "Je joue les médiateurs en cherchant un compromis juste pour tout le monde.",
+                "c": "Désamorcer le conflit avec de la dérision ou une touche d'ironie.",
+                "d": "Je me retire du groupe, ce n'est pas mon problème à régler."
             },
             "ideal-space": {
                 "a": "Un lieu isolé, calme, où personne ne vient me déranger.",
@@ -139,6 +157,18 @@
                 "b": "Ton sang-froid et ton intelligence tactique.",
                 "c": "Ton énergie débordante et ton audace sans limite.",
                 "d": "Ton adaptabilité et ton esprit affûté."
+            },
+            "failure-reaction": {
+                "a": "Je tape du poing sur la table et je me relance aussitôt pour prendre ma revanche.",
+                "b": "J'analyse froidement mes erreurs pour ne plus jamais les reproduire.",
+                "c": "Je contourne le problème ou je trouve une excuse pour retomber sur mes pieds.",
+                "d": "Je cherche du soutien auprès de mes proches pour faire le point calmement."
+            },
+            "unknown-place": {
+                "a": "Je pars explorer seul(e) les environs sans attendre personne.",
+                "b": "J'analyse les lieux et j'établis un plan de repérage méthodique.",
+                "c": "Je vais immédiatement à la rencontre des locaux pour nouer le contact.",
+                "d": "Je me laisse porter par l'ambiance et mon instinct du moment."
             }
         }
     }

@@ -2,10 +2,11 @@ import { EmbedBuilder, AttachmentBuilder, APIEmbed, JSONEncodable, StringSelectM
 import { getThemeColor } from "../utils/functions.js";
 import { t, formatLocale } from "../utils/i18n.js";
 import { Entity, PersonnalityQuestion } from "../types.js";
-import { gods } from "./gods.js";
 import { personnalityQuestions } from "./questions.js";
+import { gods } from "./gods.js";
+import { heroes } from "./heroes.js";
 
-export const entities: Entity[] = [...gods];
+export const entities: Entity[] = [...gods, ...heroes];
 
 export const entitiesMap = new Map<string, Entity>(
     entities.map(entity => [entity.id, entity])

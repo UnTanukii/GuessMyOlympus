@@ -16,7 +16,7 @@ const personnalityQuestionSelectMenu: SelectMenu = {
             const waitingComponents = createWaitingResultComponents(interaction.locale);
             await interaction.update(waitingComponents);
             const closestEntity = calculateClosestEntity(interaction.user.id);
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 1000));
             const resultComponents = createEntityResultComponents(closestEntity!, interaction.locale);
             await interaction.editReply(resultComponents);
             return;

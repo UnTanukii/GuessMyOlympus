@@ -79,24 +79,26 @@
             "answer_placeholder": "Select an answer...",
             "waiting_result": "**Waiting for results...**",
             "result": "Based on your answers, your personality matches **{{entityName}}** the most!\n\n{{entityDescription}}",
-            "result_footer": "Quick disclaimer: this test is purely fictional and does not reflect reality. It is intended for entertainment purposes only (mostly because I get bored in lectures)"
+            "result_footer": "Quick disclaimer: this test is purely fictional and does not reflect reality. It is intended for entertainment purposes only (mostly because I get bored in lectures)."
         },
         "questions": {
-            "conflict": "A conflict breaks out in your friend group. How do you react?",
+            "conflict": "Faced with an open argument, what is your first reflex?",
             "ideal-space": "What is your ideal workspace or living area?",
             "ambiguous-task": "You are given an important mission with very few instructions. What do you do?",
             "support": "When faced with someone who is struggling or in distress:",
             "unexpected-obstacle": "What is your strategy when facing an unexpected obstacle?",
             "social-event": "At a party or social gathering:",
             "daily-expression": "How do you express your personality in daily life?",
-            "greatest-strength": "What is your greatest strength according to those close to you?"
+            "greatest-strength": "What is your greatest strength according to those close to you?",
+            "failure-reaction": "How do you react after a painful failure on a project?",
+            "unknown-place": "You suddenly find yourself dropped in a completely unknown place, what do you do?"
         },
         "answers": {
             "conflict": {
-                "a": "I take charge immediately and enforce the final decision.",
-                "b": "I calmly analyze the facts to offer the most rational solution.",
-                "c": "I let my anger explode—I need to vent.",
-                "d": "I try to lighten the mood with humor and a clever distraction."
+                "a": "I raise my voice to immediately restore order and enforce my authority.",
+                "b": "I act as a mediator to find a fair compromise for everyone.",
+                "c": "I defuse the conflict using humor or a touch of irony.",
+                "d": "I walk away; it is not my problem to solve."
             },
             "ideal-space": {
                 "a": "An isolated, quiet place where nobody disturbs me.",
@@ -139,6 +141,18 @@
                 "b": "Your composure and tactical intelligence.",
                 "c": "Your boundless energy and limitless boldness.",
                 "d": "Your adaptability and sharp mind."
+            },
+            "failure-reaction": {
+                "a": "I slam my fist on the table and immediately jump back in to get my revenge.",
+                "b": "I dispassionately analyze my mistakes so I never repeat them.",
+                "c": "I bypass the issue or find a clever way to land on my feet.",
+                "d": "I seek comfort and advice from my close friends to process it."
+            },
+            "unknown-place": {
+                "a": "I go explore the surroundings on my own without waiting for anyone.",
+                "b": "I analyze the area and make a methodical mapping plan.",
+                "c": "I immediately approach locals to make connections.",
+                "d": "I go with the flow and trust my instincts of the moment."
             }
         }
     }
