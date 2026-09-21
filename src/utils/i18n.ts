@@ -8,7 +8,6 @@ const resources = {
 
 export type TSupportedLanguages = keyof typeof resources;
 export const supportedLanguages = Object.keys(resources) as TSupportedLanguages[];
-console.log("-> Supported languages:", supportedLanguages);
 export async function initI18n() {
     await init({
         lng: defaultLanguage,

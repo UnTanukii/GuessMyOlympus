@@ -1,6 +1,6 @@
 import { EmbedBuilder, AttachmentBuilder, APIEmbed, JSONEncodable } from "discord.js";
 import { getRarityColor } from "../utils/functions.js";
-import { t, tSupportedLanguages } from "../utils/i18n.js";
+import { t, TSupportedLanguages } from "../utils/i18n.js";
 import { Card } from "../types";
 import { gods } from "./gods.js";
 
@@ -14,7 +14,7 @@ export function getCardById(id: string): Card | undefined {
     return cardsMap.get(id);
 };
 
-export function createCardComponents(card: Card, locale: tSupportedLanguages): { embeds: JSONEncodable<APIEmbed>[]; files: AttachmentBuilder[] } {
+export function createCardComponents(card: Card, locale: TSupportedLanguages): { embeds: JSONEncodable<APIEmbed>[]; files: AttachmentBuilder[] } {
     const cardImage = new AttachmentBuilder(`./src/assets/cards/${card.id}.png`, { name: `${card.id}.png` });
     const cardEmbed = new EmbedBuilder()
         .setColor(getRarityColor(card.rarity))

@@ -1,6 +1,6 @@
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { type Rarity } from '../types.js';
+import { type CardRarity } from '../types.js';
 
 type colorType = "text" | "variable" | "error"
 
@@ -21,7 +21,7 @@ const rarityColors = {
     mythical: "#FF7B7B"  
 };
 
-export const getRarityColor = (rarity: Rarity) => Number(`0x${rarityColors[rarity].substring(1)}`)
+export const getRarityColor = (rarity: CardRarity) => Number(`0x${rarityColors[rarity].substring(1)}`)
 
 export function getDirname(metaUrl: string): string {
   return dirname(fileURLToPath(metaUrl));

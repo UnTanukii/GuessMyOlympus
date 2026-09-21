@@ -10,7 +10,7 @@ const pingCommand: Command = {
         .setDescription(getDefaultCommand("ping", "description"))
         .setDescriptionLocalizations(getLocalizedCommand("ping", "description")),
     execute: async (interaction) => {
-        const card = getCardById("poseidon");
+        const card = getCardById("hades");
         if (!card) {
             await interaction.reply("Carte non trouvée.");
             return;
