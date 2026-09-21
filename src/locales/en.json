@@ -1,0 +1,142 @@
+{
+    "errors": {
+        "cmd_cooldown": "You must wait {{time}} second(s) before using this command again.",
+        "int_not_author": "You cannot interact with this component because you are not the author."
+    },
+    "commands": {
+        "ping": {
+            "name": "ping",
+            "description": "Responds with Pong!"
+        },
+        "whoami": {
+            "name": "whoami",
+            "description": "Answer questions to find out which character from Greek mythology you are."
+        }
+    },
+    "entities": {
+        "type": {
+            "god": "God/Goddess ⚡",
+            "hero": "Hero/Heroine 🛡️",
+            "monster": "Monster 🐉"
+        },
+
+        "zeus": {
+            "name": "Zeus",
+            "description": "The king of the gods, master of the sky and thunder."
+        },
+        "poseidon": {
+            "name": "Poseidon",
+            "description": "The god of the sea, capable of causing storms and earthquakes."
+        },
+        "hera": {
+            "name": "Hera",
+            "description": "The queen of the gods, wife of Zeus and protector of marriage."
+        },
+        "hades": {
+            "name": "Hades",
+            "description": "The god of the underworld, guardian of souls and ruler of death."
+        },
+        "athena": {
+            "name": "Athena",
+            "description": "The goddess of wisdom, warfare strategy, and crafts."
+        },
+        "apollo": {
+            "name": "Apollo",
+            "description": "The god of the sun, music, and prophecy."
+        },
+        "artemis": {
+            "name": "Artemis",
+            "description": "The goddess of the hunt, wilderness, and wild animals."
+        },
+        "ares": {
+            "name": "Ares",
+            "description": "The god of war, representing violence and conflict."
+        },
+        "aphrodite": {
+            "name": "Aphrodite",
+            "description": "The goddess of love, beauty, and desire."
+        },
+        "hephaestus": {
+            "name": "Hephaestus",
+            "description": "The god of fire, metalworking, and crafts."
+        },
+        "hermes": {
+            "name": "Hermes",
+            "description": "The god of travelers, messengers, and thieves."
+        },
+        "dionysus": {
+            "name": "Dionysus",
+            "description": "The god of wine, festivity, and joy."
+        },
+        "demeter": {
+            "name": "Demeter",
+            "description": "The goddess of agriculture, nature, and the harvest."
+        }
+    },
+    "personnality": {
+        "fields": {
+            "answer": "Answer {{answer}}",
+            "answer_placeholder": "Select an answer..."
+        },
+        "questions": {
+            "conflict": "A conflict breaks out in your friend group. How do you react?",
+            "ideal_space": "What is your ideal workspace or living area?",
+            "ambiguous_task": "You are given an important mission with very few instructions. What do you do?",
+            "support": "When faced with someone who is struggling or in distress:",
+            "unexpected_obstacle": "What is your strategy when facing an unexpected obstacle?",
+            "social_event": "At a party or social gathering:",
+            "daily_expression": "How do you express your personality in daily life?",
+            "greatest_strength": "What is your greatest strength according to those close to you?"
+        },
+        "answers": {
+            "conflict": {
+                "a": "I take charge immediately and enforce the final decision.",
+                "b": "I calmly analyze the facts to offer the most rational solution.",
+                "c": "I let my anger explode—I need to vent.",
+                "d": "I try to lighten the mood with humor and a clever distraction."
+            },
+            "ideal_space": {
+                "a": "An isolated, quiet place where nobody disturbs me.",
+                "b": "A lively spot surrounded by people, music, and activity.",
+                "c": "An ultra-organized, functional space where everything has its place.",
+                "d": "A creative studio or workshop filled with ongoing projects."
+            },
+            "ambiguous_task": {
+                "a": "I improvise on the spot based on my intuition.",
+                "b": "I set up a rigorous strategic plan before laying the first brick.",
+                "c": "I ask for the group's input so we can move forward together.",
+                "d": "I handle it on my own, my way, without answering to anyone."
+            },
+            "support": {
+                "a": "I take them under my wing and protect them at all costs.",
+                "b": "I give them logical advice so they can solve the problem themselves.",
+                "c": "It makes me uncomfortable; I prefer to keep my distance.",
+                "d": "I use clever tricks or my contacts to solve their problem behind the scenes."
+            },
+            "unexpected_obstacle": {
+                "a": "Brute force and direct confrontation.",
+                "b": "Find a creative workaround or a loophole in the system.",
+                "c": "Coldly reassess the situation and adjust my approach.",
+                "d": "Stand my ground and wait for the obstacle to give way."
+            },
+            "social_event": {
+                "a": "I am the center of attention and the life of the party.",
+                "b": "I stay with a few close friends to make sure everyone is doing well.",
+                "c": "I prefer to observe from a quiet corner.",
+                "d": "I like to throw out playful challenges or tease people."
+            },
+            "daily_expression": {
+                "a": "Through art, style, music, or writing.",
+                "b": "Through my achievements, my position, and my successes.",
+                "c": "Through my sense of justice and fairness.",
+                "d": "Through my humor, my stories, and my boldness."
+            },
+            "greatest_strength": {
+                "a": "Your loyalty and your ability to care for others.",
+                "b": "Your composure and tactical intelligence.",
+                "c": "Your boundless energy and limitless boldness.",
+                "d": "Your adaptability and sharp mind."
+            }
+        }
+    }
+}

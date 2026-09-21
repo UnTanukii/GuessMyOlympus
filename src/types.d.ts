@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, Collection, AutocompleteInteraction, ChatInputCommandInteraction } from "discord.js"
+import { SlashCommandBuilder, Collection, AutocompleteInteraction, ChatInputCommandInteraction, StringSelectMenuInteraction } from "discord.js"
 
 export interface Command {
     command: SlashCommandBuilder,
@@ -8,6 +8,12 @@ export interface Command {
     cooldown?: number // in seconds
 };
 
+export interface SelectMenu {
+    name: RegExp | string,
+    author?: boolean,
+    execute: (interaction: StringSelectMenuInteraction, ...parameters: string[]) => void | Promise<void>
+};
+
 export interface BotEvent {
     name: string,
     once?: boolean | false,
@@ -15,14 +21,39 @@ export interface BotEvent {
 };
 
 
-export type CardRarity = "common" | "uncommon" | "rare" | "epic" | "legendary" | "mythical";
-export type CardType = "god" | "hero" | "monster";
-export type CardLocation = "olympus" | "underworld" | "tartarus";
-export interface Card {
+export type EntityType = "god" | "hero" | "monster";
+export interface Entity {
     id: string, 
-    rarity: CardRarity,
-    type: CardType,
-    location?: CardLocation
+    type: EntityType,
+    personnality: {
+        authority: number,
+        logic: number,
+        impulsivity: number,
+        sociability: number,
+        independence: number,
+        mischief: number,
+        creativity: number,
+        empathyProtection: number
+    }
+};
+
+export interface PersonnalityAnswer {
+    id: string, 
+    changes: {
+        authority?: number,
+        logic?: number,
+        impulsivity?: number,
+        sociability?: number,
+        independence?: number,
+        mischief?: number,
+        creativity?: number,
+        empathyProtection?: number
+    }
+};
+
+export interface PersonnalityQuestion {
+    id: string, 
+    answers: PersonnalityAnswer[]
 };
 
 declare global {
@@ -41,5 +72,6 @@ declare module "discord.js" {
     export interface Client {
         commands: Collection<string, Command>
         cooldowns: Collection<string, number>
+        translate: (locale: TSupportedLanguages, key: string, options?: Record<string, unknown>) => string
     }
 };

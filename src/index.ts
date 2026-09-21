@@ -1,7 +1,7 @@
 import { Client, GatewayIntentBits, Collection } from "discord.js";
 import { type Command } from "./types";
 import { getDirname } from "./utils/functions.js";
-import { initI18n } from "./utils/i18n.js";
+import { initI18n, t, TSupportedLanguages } from "./utils/i18n.js";
 import { config } from "dotenv";
 import { readdirSync } from "fs";
 import { join } from "path";
@@ -15,6 +15,7 @@ const client = new Client({intents:[Guilds, MessageContent, GuildMessages, Guild
 
 client.commands = new Collection<string, Command>()
 client.cooldowns = new Collection<string, number>()
+client.translate = (locale: TSupportedLanguages, key: string, options?: Record<string, unknown>) => t(locale, key, options);
 
 const handlersDir = join(getDirname(import.meta.url), "./handlers");
 const handlerFiles = readdirSync(handlersDir).filter(file => file.endsWith(".js") || file.endsWith(".ts") && !file.endsWith(".d.ts"));

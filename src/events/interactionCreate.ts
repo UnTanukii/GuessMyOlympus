@@ -1,16 +1,21 @@
 import { type Interaction } from "discord.js";
-import { type BotEvent } from "../types";
+import { readdirSync } from "fs";
+import { join } from "path";
+import { pathToFileURL } from "url";
+import { type BotEvent, type SelectMenu } from "../types";
+import { getDirname } from "../utils/functions.js";
 
 const event : BotEvent = {
     name: "interactionCreate",
-    execute: (interaction: Interaction) => {
+    execute: async (interaction: Interaction) => {
         if (interaction.isChatInputCommand()) {
             let command = interaction.client.commands.get(interaction.commandName)
             let cooldown = interaction.client.cooldowns.get(`${interaction.commandName}-${interaction.user.username}`)
             if (!command) return;
             if (command.cooldown && cooldown) {
                 if (Date.now() < cooldown) {
-                    interaction.reply(`You have to wait ${Math.floor(Math.abs(Date.now() - cooldown) / 1000)} second(s) to use this command again.`)
+                    const remainingTime = Math.floor(Math.abs(Date.now() - cooldown) / 1000);
+                    interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.cmd_cooldown", { time: remainingTime }), ephemeral: true })
                     setTimeout(() => interaction.deleteReply(), 5000)
                     return
                 }
@@ -45,6 +50,32 @@ const event : BotEvent = {
                 command.modal(interaction);
             } catch (error) {
                 console.error(error);
+            }
+        } else if (interaction.isStringSelectMenu()) {
+            const selectMenusDir = join(getDirname(import.meta.url), "../interactions/selectMenus");
+            const selectMenuFiles = readdirSync(selectMenusDir)
+                .filter(file => (file.endsWith(".js") || file.endsWith(".ts")) && !file.endsWith(".d.ts"));
+
+            for (const file of selectMenuFiles) {
+                const filePath = join(selectMenusDir, file);
+                const selectMenuModule = await import(pathToFileURL(filePath).href);
+                const interactionFile: SelectMenu = selectMenuModule.default;
+                const selectMenuPattern = interactionFile.name;
+                if (selectMenuPattern instanceof RegExp) selectMenuPattern.lastIndex = 0;
+                const match = selectMenuPattern instanceof RegExp ? selectMenuPattern.exec(interaction.customId) : selectMenuPattern === interaction.customId ? [interaction.customId] : null;
+
+                if (!match) continue;
+                if (interactionFile.author && interaction.user.id !== interaction.message.interactionMetadata?.user.id) {
+                    await interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.int_not_author"), ephemeral: true });
+                    return;
+                }
+
+                try {
+                    await interactionFile.execute(interaction, ...match.slice(1));
+                } catch (error) {
+                    console.error(error);
+                }
+                return;
             }
         }
     }

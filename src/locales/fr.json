@@ -1,34 +1,23 @@
 {
+    "errors": {
+        "cmd_cooldown": "Tu dois attendre {{time}} seconde(s) avant de pouvoir réutiliser cette commande.",
+        "int_not_author": "Tu ne peux pas interagir avec cette interaction car tu n'en es pas l'auteur."
+    },
     "commands": {
         "ping": {
             "name": "ping",
             "description": "Répond avec Pong !"
+        },
+        "whoami": {
+            "name": "whoami",
+            "description": "Réponds à des questions pour découvrir quel personnage de la mythologie grecque tu es."
         }
     },
-    "cards": {
-        "rarity": {
-            "common": "Commun",
-            "uncommon": "Peu commun",
-            "rare": "Rare",
-            "epic": "Épique",
-            "legendary": "Légendaire",
-            "mythical": "Mythique"
-        },
+    "entities": {
         "type": {
             "god": "Dieu/Déesse ⚡",
             "hero": "Héros/Héroïne 🛡️",
             "monster": "Monstre 🐉"
-        },
-        "location": {
-            "olympus": "Mont Olympe 🏛️",
-            "underworld": "Enfers 💀",
-            "tartarus": "Tartare 🔥"
-        },
-        "fields":{
-            "description": "Description",
-            "rarity": "Rareté",
-            "type": "Type",
-            "location": "Lieu de résidence"
         },
 
         "zeus": {
@@ -82,6 +71,72 @@
         "demeter": {
             "name": "Déméter",
             "description": "La déesse de l'agriculture, de la nature et des récoltes."
+        }
+    },
+    "personnality": {
+        "fields": {
+            "answer": "Réponse {{answer}}",
+            "answer_placeholder": "Sélectionner une réponse..."
+        },
+        "questions": {
+            "conflict": "Un conflit éclate au sein de ton groupe d'amis. Comment réagis-tu ?",
+            "ideal_space": "Quel est ton espace de travail ou de vie idéal ?",
+            "ambiguous_task": "On te confie une mission importante avec peu de directives. Que fais-tu ?",
+            "support": "Face à quelqu'un qui est dans la difficulté ou la détresse :",
+            "unexpected_obstacle": "Quelle est ta stratégie face à un obstacle imprévu ?",
+            "social_event": "Lors d'une soirée ou d'un rassemblement social :",
+            "daily_expression": "Comment exprimes-tu ta personnalité au quotidien ?",
+            "greatest_strength": "Quelle est ta plus grande force selon tes proches ?"
+        },
+        "answers": {
+            "conflict": {
+                "a": "Je prends les commandes immédiatement et j'impose la décision finale.",
+                "b": "J'analyse calmement les faits pour proposer la solution la plus rationnelle.",
+                "c": "Je laisse exploser ma colère, il faut que ça sorte.",
+                "d": "J'essaie de détendre l'atmosphère avec de l'humour et une feinte diversion."
+            },
+            "ideal_space": {
+                "a": "Un lieu isolé, calme, où personne ne vient me déranger.",
+                "b": "Un endroit animé, entouré de monde avec de la musique et du mouvement.",
+                "c": "Un espace ultra-organisé et fonctionnel où chaque chose a sa place.",
+                "d": "Un atelier ou studio créatif rempli de projets en cours."
+            },
+            "ambiguous_task": {
+                "a": "J'improvise sur le moment au gré de mon intuition.",
+                "b": "J'établis un plan stratégique rigoureux avant de poser la moindre pierre.",
+                "c": "Je demande l'avis du groupe pour avancer ensemble.",
+                "d": "Je m'en occupe seul(e) à ma façon, sans rendre de comptes."
+            },
+            "support": {
+                "a": "Je le prends sous mon aile et le protège à tout prix.",
+                "b": "Je lui donne un conseil logique pour qu'il résolve son problème lui-même.",
+                "c": "Ça me met mal à l'aise, je préfère garder mes distances.",
+                "d": "J'utilise la ruse ou mes contacts pour lui régler son problème en coulisses."
+            },
+            "unexpected_obstacle": {
+                "a": "La force brute et la confrontation directe.",
+                "b": "Trouver un contournement créatif ou une faille dans le système.",
+                "c": "Réévaluer la situation froidement et ajuster le tir.",
+                "d": "Rester ferme sur mes positions et attendre que l'obstacle cède."
+            },
+            "social_event": {
+                "a": "Je suis le centre de l'attention et le moteur de la fête.",
+                "b": "Je reste avec mes quelques proches pour m'assurer que tout le monde va bien.",
+                "c": "Je préfère observer depuis un coin discret.",
+                "d": "J'aime bien lancer des petits défis ou taquiner les gens."
+            },
+            "daily_expression": {
+                "a": "À travers l'art, le style, la musique ou l'écriture.",
+                "b": "À travers mes performances, ma position et mes réussites.",
+                "c": "À travers mon sens de la justice et de l'équité.",
+                "d": "À travers mon humour, mes histoires et mon impertinence."
+            },
+            "greatest_strength": {
+                "a": "Ta loyauté et ta capacité à prendre soin des autres.",
+                "b": "Ton sang-froid et ton intelligence tactique.",
+                "c": "Ton énergie débordante et ton audace sans limite.",
+                "d": "Ton adaptabilité et ton esprit affûté."
+            }
         }
     }
 }
