@@ -61,7 +61,7 @@ export interface QuizzAnswer {
     valid: boolean
 };
 
-export type QuizzQuestionDifficulty = "easy" | "medium" | "hard";
+export type QuizzQuestionDifficulty = "easy" | "medium" | "hard" | "expert" | "all";
 export interface QuizzQuestion {
     id: string, 
     difficulty: QuizzQuestionDifficulty,

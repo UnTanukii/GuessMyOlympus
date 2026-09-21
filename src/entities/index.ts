@@ -16,9 +16,10 @@ import {
     Entity, 
     PersonalityQuestion, 
     PersonalityAnswer, 
-    QuizzAnswer, 
-    QuizzQuestion 
+    QuizzQuestion,
+    QuizzAnswer,
 } from "../types.js";
+import { quizzQuestionDifficulties, quizzQuestionDifficultyEmojis, quizzQuestionCount } from "../constants.js";
 
 import { personalityQuestions } from "./questions/personality.js";
 import { quizzQuestions } from "./questions/quizz.js";
@@ -55,12 +56,12 @@ export const Personality = {
         addAnswer(userId: Snowflake, questionId: string, answerId: string) {
             const question = Personality.Questions.findById(questionId);
             if (!question) {
-                throw new Error(`Question with ID ${questionId} not found`);
+                throw new Error(`Question with ID ${questionId} not found (Personality.Profile.addAnswer)`);
             }
 
             const answer = Personality.Questions.findAnswer(question, answerId);
             if (!answer) {
-                throw new Error(`Answer with ID ${answerId} not found for question ${questionId}`);
+                throw new Error(`Answer with ID ${answerId} not found for question ${questionId} (Personality.Profile.addAnswer)`);
             }
 
             const userProfile = userPersonalities.get(userId) || {};
@@ -100,15 +101,15 @@ export const Personality = {
 
     Components: {
         Question: {
-            create(index: number, locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
+            create(questionId: number, locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
                 const loc = formatLocale(locale);
-                const question = Personality.Questions.all[index];
+                const question = Personality.Questions.all[questionId];
                 if (!question) {
-                    throw new Error("No questions available.");
+                    throw new Error("No questions available. (Personality.Components.Question.create)");
                 }
 
                 const answerSelect = new StringSelectMenuBuilder()
-                    .setCustomId(`personality_question_${index}_${question.id}`)
+                    .setCustomId(`personality_question_${questionId}_${question.id}`)
                     .setPlaceholder(t(loc, "personality.fields.answer_placeholder"))
                     .addOptions(
                         question.answers.map(answer => 
@@ -122,7 +123,7 @@ export const Personality = {
                 const row = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(answerSelect);
                 const embed = new EmbedBuilder()
                     .setColor(getThemeColor("text"))
-                    .setTitle(`${index + 1}/${Personality.Questions.all.length} - ${t(loc, `personality.questions.${question.id}`)}`);
+                    .setTitle(`${questionId + 1}/${Personality.Questions.all.length} - ${t(loc, `personality.questions.${question.id}`)}`);
 
                 return { embeds: [embed], components: [row] };
             }
@@ -160,6 +161,8 @@ export const Personality = {
     }
 };
 
+const userQuizzQuestions = new Map<string, string>();
+const userQuizzScore = new Map<string, number>();
 export const Quizz = {
     Questions: {
         all: quizzQuestions,
@@ -170,6 +173,163 @@ export const Quizz = {
 
         findAnswer(question: QuizzQuestion, answerId: string): QuizzAnswer | undefined {
             return question.answers.find(a => a.id === answerId);
+        },
+
+        findAnswerById(answerId: string): QuizzAnswer | undefined {
+            for (const question of this.all) {
+                const answer = question.answers.find(a => a.id === answerId);
+                if (answer) return answer;
+            }
+            return undefined;
+        },
+
+        findByDifficulty(difficulty: string): QuizzQuestion[] {
+            if (difficulty === 'all') return this.all;
+            return this.all.filter(q => q.difficulty === difficulty);
+        },
+
+        getRandomQuestions(difficulty: string): QuizzQuestion[] {
+            const questions = [...this.findByDifficulty(difficulty)];
+            if (questions.length === 0) return [];
+            const randomQuestions: QuizzQuestion[] = [];
+            for (let i = 0; i < quizzQuestionCount && questions.length > 0; i++) {
+                const randomIndex = Math.floor(Math.random() * questions.length);
+                const [question] = questions.splice(randomIndex, 1);
+                if (question) randomQuestions.push(question);
+            }
+            return randomQuestions;
         }
     },
+
+    User: {
+        async setRandomQuestionsForUser(userId: Snowflake, difficulty: string): Promise<QuizzQuestion[]> {
+            const questions = Quizz.Questions.getRandomQuestions(difficulty);
+            if (questions.length === 0) return [];
+            userQuizzQuestions.set(userId, questions.map(q => q.id).join(','));
+            return questions;
+        },
+
+        getQuestionsForUser(userId: Snowflake): QuizzQuestion[] {
+            const questionIds = userQuizzQuestions.get(userId);
+            if (!questionIds) return [];
+            const idsArray = questionIds.split(',');
+            return idsArray.map(id => Quizz.Questions.findById(id)).filter(q => q !== undefined) as QuizzQuestion[];
+        }
+    },
+
+    Score: {
+        addScore(userId: Snowflake, score: number) {
+            const currentScore = userQuizzScore.get(userId) || 0;
+            userQuizzScore.set(userId, currentScore + score);
+        },
+
+        getScore(userId: Snowflake): number {
+            return userQuizzScore.get(userId) || 0;
+        }
+    },
+
+    Components: {
+        SelectDifficulty: {
+            create(locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
+                const loc = formatLocale(locale);
+                const difficultySelect = new StringSelectMenuBuilder()
+                    .setCustomId(`quizz_select_difficulty`)
+                    .setPlaceholder(t(loc, "quizz.fields.select_difficulty_placeholder"))
+                    .addOptions(
+                        quizzQuestionDifficulties.map(difficulty => 
+                            new StringSelectMenuOptionBuilder()
+                                .setLabel(t(loc, `quizz.fields.${difficulty}`))
+                                .setEmoji(quizzQuestionDifficultyEmojis[difficulty])
+                                .setValue(difficulty)
+                        )
+                    );
+
+                const row = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(difficultySelect);
+                const embed = new EmbedBuilder()
+                    .setColor(getThemeColor("text"))
+                    .setTitle(t(loc, "quizz.fields.select_difficulty_title"));
+
+                return { embeds: [embed], components: [row] };
+            }
+        },
+
+        Result: {
+            create(questionId: number, isCorrect: boolean, correctAnswerId: string, userId: Snowflake, locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
+                const loc = formatLocale(locale);
+                const questionsForUser = Quizz.User.getQuestionsForUser(userId);
+                const question = questionsForUser[questionId];
+                if (!question) {
+                    throw new Error("No questions available. (Quizz.Components.Result.create)");
+                }
+
+                const visualQuestionId = questionId + 1;
+                const embed = new EmbedBuilder()
+                    .setColor(getThemeColor("text"))
+                    .setTitle(`${visualQuestionId}/${questionsForUser.length} - ${t(loc, `quizz.questions.${question.id}`)} ${quizzQuestionDifficultyEmojis[question.difficulty]}`)
+                    .setDescription(isCorrect ? t(loc, "quizz.fields.correct_answer") : t(loc, "quizz.fields.incorrect_answer", { correctAnswerLetter: correctAnswerId.split('.')[1]?.toUpperCase() || 'N/A', correctAnswerString: t(loc, `quizz.answers.${correctAnswerId}`) }))
+                    .setFooter({ text: t(loc, "quizz.fields.current_score", { score: Quizz.Score.getScore(userId), total: visualQuestionId }) });
+
+                return { embeds: [embed], components: [] };
+            }
+        },
+
+        Question: {
+            create(questionId: number, userId: Snowflake, locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
+                const loc = formatLocale(locale);
+                const questionsForUser = Quizz.User.getQuestionsForUser(userId);
+                const question = questionsForUser[questionId];
+                if (!question) {
+                    throw new Error("No questions available. (Quizz.Components.Question.create)");
+                }
+
+                const answerSelect = new StringSelectMenuBuilder()
+                    .setCustomId(`quizz_question_${questionId}_${question.id}`)
+                    .setPlaceholder(t(loc, "quizz.fields.answer_placeholder"))
+                    .addOptions(
+                        question.answers.map(answer => 
+                            new StringSelectMenuOptionBuilder()
+                                .setLabel(t(loc, `quizz.fields.answer`, { answer: answer.id.split('.')[1]?.toUpperCase() || '' }))
+                                .setDescription(t(loc, `quizz.answers.${answer.id}`))
+                                .setValue(answer.id)
+                        )
+                    );
+
+                const row = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(answerSelect);
+                const embed = new EmbedBuilder()
+                    .setColor(getThemeColor("text"))
+                    .setTitle(`${questionId + 1}/${questionsForUser.length} - ${t(loc, `quizz.questions.${question.id}`)} ${quizzQuestionDifficultyEmojis[question.difficulty]}`)
+                    .setFooter({ text: t(loc, "quizz.fields.current_score", { score: Quizz.Score.getScore(userId), total: questionId }) });
+
+                return { embeds: [embed], components: [row] };
+            }
+        },
+
+        FinalScore: {
+            create(userId: Snowflake, locale: string): { embeds: APIEmbed[] | JSONEncodable<APIEmbed>[], components: ActionRowBuilder<StringSelectMenuBuilder>[] } {
+                const loc = formatLocale(locale);
+                const finalScore = Quizz.Score.getScore(userId);
+                const totalQuestions = Quizz.User.getQuestionsForUser(userId).length;
+
+                let resultText = '';
+                switch (true) {
+                    case finalScore === totalQuestions:
+                        resultText = t(loc, "quizz.fields.final_score_perfect");
+                        break;
+                    case finalScore >= totalQuestions / 2:
+                        resultText = t(loc, "quizz.fields.final_score_more_half");
+                        break;
+                    case finalScore < totalQuestions / 2:
+                        resultText = t(loc, "quizz.fields.final_score_less_half");
+                        break;
+                }
+
+                const embed = new EmbedBuilder()
+                    .setColor(getThemeColor("text"))
+                    .setTitle(t(loc, "quizz.fields.final_score_title"))
+                    .setDescription(t(loc, "quizz.fields.final_score_description", { score: finalScore, total: totalQuestions, finalMessage: resultText }));
+
+                return { embeds: [embed], components: [] };
+            }
+        },
+    }
 };

@@ -16,7 +16,7 @@ const whoamiCommand: Command = {
         const questionComponents = Personality.Components.Question.create(0, interaction.locale);
         return interaction.reply(questionComponents);
     },
-    cooldown: 10
+    cooldown: 60
 };
 
 export default whoamiCommand;

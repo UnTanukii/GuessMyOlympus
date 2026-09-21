@@ -10,7 +10,11 @@
         },
         "whoami": {
             "name": "whoami",
-            "description": "Réponds à des questions pour découvrir quel personnage de la mythologie grecque tu es."
+            "description": "Réponds à des questions pour découvrir quel personnage de la mythologie grecque tu es"
+        },
+        "quizz": {
+            "name": "quizz",
+            "description": "Teste tes connaissances sur la mythologie grecque avec un quizz"
         }
     },
     "entities": {
@@ -193,33 +197,114 @@
         }
     },
     "quizz": {
+        "fields": {
+            "select_difficulty_title": "Sélectionner une difficulté pour le quizz",
+            "select_difficulty_placeholder": "Sélectionner une difficulté...",
+            "easy": "Facile",
+            "medium": "Moyen",
+            "hard": "Difficile",
+            "expert": "Expert",
+            "all": "Toutes difficultés confondues",
+            "answer": "Réponse {{answer}}",
+            "answer_placeholder": "Sélectionner une réponse...",
+            "current_score": "Score actuel : {{score}}/{{total}}",
+            "correct_answer": "Votre réponse est correcte ! ✅",
+            "incorrect_answer": "Votre réponse est incorrecte. \nLa bonne réponse était : **{{correctAnswerLetter}}) {{correctAnswerString}}** ❌",
+            "final_score_title": "Résultat final du quizz",
+            "final_score_description": "**Félicitations !** Vous avez terminé le quizz avec un score de **{{score}}/{{total}}**.\n{{finalMessage}}",
+            "final_score_perfect": "Vous êtes un véritable expert de la mythologie grecque ! On ne peut pas faire mieux que ça !",
+            "final_score_more_half": "Vous êtes un véritable connaisseur de la mythologie grecque !",
+            "final_score_less_half": "Vous avez encore des choses à apprendre sur la mythologie grecque, mais ne vous découragez pas !"
+        },
         "questions": {
             "goddess_of_retribution": "Quelle déesse personnifie la vengeance divine et la juste colère ?",
             "underworld_five_rivers": "Quel fleuve des Enfers personnifie l'oubli ?",
             "monster_chimaera_parts": "De quels animaux la Chimère est-elle principalement composée ?",
             "argonauts_leader": "Quel héros menait la quête de la Toison d'Or à bord du navire Argo ?",
+            "gorgon_who_was_mortal": "Laquelle de ces trois Gorgones était la seule à être mortelle ?",
+            "apple_of_discord_label": "Qu'était-il inscrit sur la Pomme d'Or de la Discorde lancée par Éris ?",
+            "heracles_first_labor": "Quel fut le tout premier des douze travaux d'Héraclès ?",
+            "ferryman_of_the_dead": "Quel est le nom du passeur qui transporte les âmes à travers le Styx ?",
+            "god_of_wine_and_ecstasy": "Quel dieu olympien est le protecteur de la vigne, du vin et du théâtre ?",
+            "guardian_three_headed_dog": "Quel monstrueux chien à trois têtes garde l'entrée du royaume des morts ?",
+
             "titan_of_sun_before_apollo": "Quel Titan incarnait le Soleil avant que ce rôle ne soit associé à Apollon ?",
             "hephaestus_fall_duration": "Combien de temps dura la chute d'Héphaïstos lorsqu'il fut jeté de l'Olympe ?",
             "actaeon_metamorphosis": "En quel animal le chasseur Actéon fut-il changé par Artémis pour l'avoir vue nue ?",
             "slayer_of_argus": "Quel dieu a décapité Argus aux cent yeux sur ordre de Zeus ?",
+            "titan_holding_celestial_heavens": "Quel Titan condamné par Zeus doit porter la voûte céleste sur ses épaules ?",
+            "nurse_of_zeus_goat": "Comment s'appelait la chèvre divine qui a allaité Zeus dans une grotte de Crète ?",
+            "judge_of_underworld_minos_brother": "Parmi les trois juges des Enfers, quel frère de Minos jugeait les âmes asiatiques ?",
+            "inventor_of_labyrinth": "Quel mythique architecte athénien a conçu le Labyrinthe du Minotaure ?",
+            "hero_slayer_of_chimera": "Quel héros corinthien a vaincu la Chimère en chevauchant Pégase ?",
+            "goddess_born_from_sea_foam": "Quelle déesse de l'amour est née de l'écume de mer provoquée par la castration d'Ouranos ?",
+
             "zeus_first_wife": "Qui fut la toute première épouse légitime de Zeus, bien avant Héra ?",
-            "hundred_handed_ones_name": "Comment appelle-t-on collectivement les trois géants aux 100 bras et 50 têtes ?",
+            "hundred_handed_ones_name": "Comment appelle-t-on collectivement les trois géants aux 100 arms et 50 têtes ?",
             "orion_blindness_healer": "Quel Titan du Soleil a rendu la vue au géant Orion aveuglé ?",
-            "mother_of_monsters_echidna": "Selon la Théogonie d'Hésiode, qui est la mère d'Échidna, la « mère des monstres » ?"
+            "mother_of_monsters_echidna": "Selon la Théogonie d'Hésiode, qui est la mère d'Échidna, la « mère des monstres » ?",
+            "personification_of_peace": "Quelle Horai (Heure) grecque est la personnification exacte de la Paix ?",
+            "winged_god_of_dreams": "Quel dieu ailé, fils d'Hypnos, a le pouvoir de façonner les formes dans les songes ?",
+            "true_name_of_the_furies": "Quel est le nom grec originel des trois déesses chthoniennes de la vengeance (Furies en latin) ?",
+            "sea_god_who_can_change_shape": "Quel vieux dieu marin métamorphe disait la vérité si on parvenait à le capturer ?",
+            "graeae_sisters_single_organ": "Quel organe unique les trois sœurs Grées se partagent-elles à tour de rôle ?",
+            "tityos_punishment_underworld": "Quel géant du Tartare se fait dévorer le foie éternellement par deux vautours ?",
+
+            "giant_crushed_under_sicily": "Quel Géant fut terrassé par Athéna lors de la Gigantomachie et écrasé sous l'île de Sicile ?",
+            "hephaestus_trapped_chair_victim": "À quelle déesse d'Olympe Héphaïstos a-t-il offert un trône d'or magique piégé pour se venger ?",
+            "first_mortal_woman_creator": "Quel dieu artisan façonna le corps de Pandore dans de l'argile sur ordre de Zeus ?",
+            "oath_river_of_gods_punishment": "Combien d'années un dieu parjure sur le Styx est-il banni du conseil des dieux ?",
+            "pomegranate_seeds_eaten_by_persephone": "Combien de pépins de grenade Perséphone a-t-elle mangés aux Enfers selon l'hymne homérique ?",
+            "prophet_transformed_into_woman": "Quel devin de Thèbes passa 7 ans sous forme de femme pour avoir frappé deux serpents s'accouplant ?",
+            "boreas_south_wind_counterpart": "Dans la mythologie grecque, quel est le nom du dieu personnifiant le Vent du Sud (Chaud et Humide) ?",
+            "alcyone_and_ceyx_birds": "En quel oiseau la déesse Thétis/Zeus transforma-t-il Alcyone après la noyade de son époux Ceyx ?",
+            "titaness_of_memory_mother_muses": "Quelle Titanide incarnant la Mémoire est la mère des 9 Muses nées de Zeus ?",
+            "who_brought_typhon_to_life": "Quelle déesse primordiale engendra le monstre Typhon avec le Tartare pour punir Zeus ?"
         },
         "answers": {
             "goddess_of_retribution": { "a": "Némésis", "b": "Eris", "c": "Hécate", "d": "Alecto" },
             "underworld_five_rivers": { "a": "Achéron", "b": "Léthé", "c": "Cocyte", "d": "Phlégéthon" },
             "monster_chimaera_parts": { "a": "Aigle, serpent et taureau", "b": "Chien, dragon et lion", "c": "Lion, chèvre et serpent", "d": "Loup, scorpion et bouc" },
             "argonauts_leader": { "a": "Thésée", "b": "Bellerophon", "c": "Perseus", "d": "Jason" },
+            "gorgon_who_was_mortal": { "a": "Méduse", "b": "Stheno", "c": "Euryale", "d": "Céto" },
+            "apple_of_discord_label": { "a": "Au plus fort", "b": "À la plus belle", "c": "Au plus sage", "d": "À la plus pure" },
+            "heracles_first_labor": { "a": "L'Hydre de Lerne", "b": "Le Sanglier de Érymanthe", "c": "Le Lion de Némée", "d": "La Biche de Cérynie" },
+            "ferryman_of_the_dead": { "a": "Thanatos", "b": "Hypnos", "c": "Hermès", "d": "Charon" },
+            "god_of_wine_and_ecstasy": { "a": "Dionysos", "b": "Hermès", "c": "Apollon", "d": "Ares" },
+            "guardian_three_headed_dog": { "a": "Orthros", "b": "Cerbère", "c": "Ladon", "d": "Fenrir" },
+
             "titan_of_sun_before_apollo": { "a": "Hélios", "b": "Hypérion", "c": "Céos", "d": "Japet" },
             "hephaestus_fall_duration": { "a": "Une journée entière", "b": "Neuf jours et neuf nuits", "c": "Trois jours", "d": "Un mois" },
             "actaeon_metamorphosis": { "a": "En sanglier", "b": "En ours", "c": "En cerf", "d": "En cygne" },
             "slayer_of_argus": { "a": "Ares", "b": "Apollo", "c": "Hephaistos", "d": "Hermes" },
+            "titan_holding_celestial_heavens": { "a": "Atlas", "b": "Prométhée", "c": "Épiméthée", "d": "Crios" },
+            "nurse_of_zeus_goat": { "a": "Io", "b": "Amalthée", "c": "Callisto", "d": "Mélisse" },
+            "judge_of_underworld_minos_brother": { "a": "Éaque", "b": "Sarpédon", "c": "Rhadamanthe", "d": "Triptolème" },
+            "inventor_of_labyrinth": { "a": "Icare", "b": "Pégase", "c": "Talos", "d": "Dédale" },
+            "hero_slayer_of_chimera": { "a": "Bellérophon", "b": "Persée", "c": "Thésée", "d": "Cadmos" },
+            "goddess_born_from_sea_foam": { "a": "Amphitrite", "b": "Aphrodite", "c": "Thétis", "d": "Calypso" },
+
             "zeus_first_wife": { "a": "Métis", "b": "Thémis", "c": "Eurynomé", "d": "Mnémosyne" },
             "hundred_handed_ones_name": { "a": "Les Gigantomaques", "b": "Les Hécatonchires", "c": "Les Aetoliens", "d": "Les Telchines" },
             "orion_blindness_healer": { "a": "Hyperion", "b": "Prométhée", "c": "Hélios", "d": "Atlas" },
-            "mother_of_monsters_echidna": { "a": "Gaïa", "b": "Nyx", "c": "Thalassa", "d": "Céto" }
+            "mother_of_monsters_echidna": { "a": "Gaïa", "b": "Nyx", "c": "Thalassa", "d": "Céto" },
+            "personification_of_peace": { "a": "Eiréné", "b": "Eunomie", "c": "Diké", "d": "Harmonie" },
+            "winged_god_of_dreams": { "a": "Phantasos", "b": "Morphée", "c": "Phobétor", "d": "Ikelos" },
+            "true_name_of_the_furies": { "a": "Les Moires", "b": "Les Harpies", "c": "Les Érinyes", "d": "Les Kères" },
+            "sea_god_who_can_change_shape": { "a": "Nérée", "b": "Triton", "c": "Glaucos", "d": "Protée" },
+            "graeae_sisters_single_organ": { "a": "Un œil (et une dent)", "b": "Une main", "c": "Un cœur", "d": "Une oreille" },
+            "tityos_punishment_underworld": { "a": "Tantalie", "b": "Tityos", "c": "Ixion", "d": "Sisyphe" },
+
+            "giant_crushed_under_sicily": { "a": "Encelade", "b": "Porphyrion", "c": "Alcyonnée", "d": "Mimas" },
+            "hephaestus_trapped_chair_victim": { "a": "Déméter", "b": "Héra", "c": "Aphrodite", "d": "Hestia" },
+            "first_mortal_woman_creator": { "a": "Prométhée", "b": "Épiméthée", "c": "Héphaïstos", "d": "Hermès" },
+            "oath_river_of_gods_punishment": { "a": "1 an", "b": "7 ans", "c": "9 ans", "d": "10 ans" },
+            "pomegranate_seeds_eaten_by_persephone": { "a": "6 pépins", "b": "3 pépins", "c": "12 pépins", "d": "1 pépin" },
+            "prophet_transformed_into_woman": { "a": "Calchas", "b": "Tirésias", "c": "Mopsos", "d": "Amphiaraos" },
+            "boreas_south_wind_counterpart": { "a": "Zéphyr", "b": "Euros", "c": "Notos", "d": "Lips" },
+            "alcyone_and_ceyx_birds": { "a": "En martinet", "b": "En albatros", "c": "En mouette", "d": "En martin-pêcheur" },
+            "titaness_of_memory_mother_muses": { "a": "Mnémosyne", "b": "Théia", "c": "Phœbé", "d": "Téthys" },
+            "who_brought_typhon_to_life": { "a": "Héra", "b": "Gaïa", "c": "Nyx", "d": "Échidna" }
         }
     }
 }

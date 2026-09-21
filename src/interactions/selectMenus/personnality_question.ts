@@ -1,10 +1,10 @@
 import { type SelectMenu } from "../../types.js";
-import { Personality} from "../../entities/index.js";
+import { Personality } from "../../entities/index.js";
 import { personalityQuestions } from "../../entities/questions/personality.js";
 
 const personalityQuestionSelectMenu: SelectMenu = {
     name: /^personality_question_(\d+)_(.+)$/,
-    author: false,
+    author: true,
     execute: async (interaction) => {
         const questionMatch = interaction.customId.match(/^personality_question_(\d+)_(.+)$/);
         const questionNbText = questionMatch?.[1];

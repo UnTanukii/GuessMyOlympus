@@ -1,4 +1,4 @@
-import { type Interaction } from "discord.js";
+import { MessageFlags, type Interaction } from "discord.js";
 import { readdirSync } from "fs";
 import { join } from "path";
 import { pathToFileURL } from "url";
@@ -15,7 +15,7 @@ const event : BotEvent = {
             if (command.cooldown && cooldown) {
                 if (Date.now() < cooldown) {
                     const remainingTime = Math.floor(Math.abs(Date.now() - cooldown) / 1000);
-                    interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.cmd_cooldown", { time: remainingTime }), ephemeral: true })
+                    interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.cmd_cooldown", { time: remainingTime }), flags: MessageFlags.Ephemeral });
                     setTimeout(() => interaction.deleteReply(), 5000)
                     return
                 }
@@ -66,7 +66,7 @@ const event : BotEvent = {
 
                 if (!match) continue;
                 if (interactionFile.author && interaction.user.id !== interaction.message.interactionMetadata?.user.id) {
-                    await interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.int_not_author"), ephemeral: true });
+                    await interaction.reply({ content: interaction.client.translate(interaction.locale, "errors.int_not_author"), flags: MessageFlags.Ephemeral });
                     return;
                 }
 
