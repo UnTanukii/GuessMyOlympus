@@ -4,7 +4,7 @@ export const monsters: Entity[] = [
   {
     id: "medusa",
     type: "monster",
-    personnality: {
+    personality: {
       authority: 75,
       logic: 50,
       impulsivity: 60,
@@ -18,7 +18,7 @@ export const monsters: Entity[] = [
   {
     id: "minotaur",
     type: "monster",
-    personnality: {
+    personality: {
       authority: 60,
       logic: 10,
       impulsivity: 100,
@@ -32,7 +32,7 @@ export const monsters: Entity[] = [
   {
     id: "cerberus",
     type: "monster",
-    personnality: {
+    personality: {
       authority: 70,
       logic: 40,
       impulsivity: 50,
@@ -46,7 +46,7 @@ export const monsters: Entity[] = [
   {
     id: "sphinx",
     type: "monster",
-    personnality: {
+    personality: {
       authority: 80,
       logic: 95,
       impulsivity: 20,
@@ -60,7 +60,7 @@ export const monsters: Entity[] = [
   {
     id: "sirens",
     type: "monster",
-    personnality: {
+    personality: {
       authority: 50,
       logic: 40,
       impulsivity: 60,

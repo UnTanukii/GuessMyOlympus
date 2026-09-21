@@ -1,6 +1,6 @@
-import { PersonnalityQuestion } from "../types";
+import { PersonalityQuestion } from "../../types";
 
-export const personnalityQuestions: PersonnalityQuestion[] = [
+export const personalityQuestions: PersonalityQuestion[] = [
   {
     id: "conflict",
     answers: [

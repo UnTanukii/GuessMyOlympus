@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "discord.js";
 import { type Command } from "../types.js";
-import { createEntityResultComponents, getEntityById } from "../entities/index.js";
+import { Personality } from "../entities/index.js";
 import { getLocalizedCommand, getDefaultCommand } from "../utils/i18n.js";
 
 const pingCommand: Command = {
@@ -10,12 +10,12 @@ const pingCommand: Command = {
         .setDescription(getDefaultCommand("ping", "description"))
         .setDescriptionLocalizations(getLocalizedCommand("ping", "description")),
     execute: async (interaction) => {
-        const card = getEntityById("hades");
+        const card = Personality.Entities.getById("hades");
         if (!card) {
             await interaction.reply("Entité non trouvée.");
             return;
         }
-        const cardComponents = createEntityResultComponents(card, "fr");
+        const cardComponents = Personality.Components.EntityResult.create(card, "fr");
         await interaction.reply(cardComponents);
     },
     cooldown: 10

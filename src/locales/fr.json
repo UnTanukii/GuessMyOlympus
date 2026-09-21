@@ -109,7 +109,7 @@
             "description": "**Les Sirènes** sont des créatures au chant envoûtant qui attirent les marins vers les récifs. Elles ont une personnalité séduisante, manipulatrice et espiègle, usant du charme pour arriver à leurs fins. 🧜‍♀️"
         }
     },
-    "personnality": {
+    "personality": {
         "fields": {
             "answer": "Réponse {{answer}}",
             "answer_placeholder": "Sélectionner une réponse...",
@@ -190,6 +190,36 @@
                 "c": "Je vais immédiatement à la rencontre des locaux pour nouer le contact.",
                 "d": "Je me laisse porter par l'ambiance et mon instinct du moment."
             }
+        }
+    },
+    "quizz": {
+        "questions": {
+            "goddess_of_retribution": "Quelle déesse personnifie la vengeance divine et la juste colère ?",
+            "underworld_five_rivers": "Quel fleuve des Enfers personnifie l'oubli ?",
+            "monster_chimaera_parts": "De quels animaux la Chimère est-elle principalement composée ?",
+            "argonauts_leader": "Quel héros menait la quête de la Toison d'Or à bord du navire Argo ?",
+            "titan_of_sun_before_apollo": "Quel Titan incarnait le Soleil avant que ce rôle ne soit associé à Apollon ?",
+            "hephaestus_fall_duration": "Combien de temps dura la chute d'Héphaïstos lorsqu'il fut jeté de l'Olympe ?",
+            "actaeon_metamorphosis": "En quel animal le chasseur Actéon fut-il changé par Artémis pour l'avoir vue nue ?",
+            "slayer_of_argus": "Quel dieu a décapité Argus aux cent yeux sur ordre de Zeus ?",
+            "zeus_first_wife": "Qui fut la toute première épouse légitime de Zeus, bien avant Héra ?",
+            "hundred_handed_ones_name": "Comment appelle-t-on collectivement les trois géants aux 100 bras et 50 têtes ?",
+            "orion_blindness_healer": "Quel Titan du Soleil a rendu la vue au géant Orion aveuglé ?",
+            "mother_of_monsters_echidna": "Selon la Théogonie d'Hésiode, qui est la mère d'Échidna, la « mère des monstres » ?"
+        },
+        "answers": {
+            "goddess_of_retribution": { "a": "Némésis", "b": "Eris", "c": "Hécate", "d": "Alecto" },
+            "underworld_five_rivers": { "a": "Achéron", "b": "Léthé", "c": "Cocyte", "d": "Phlégéthon" },
+            "monster_chimaera_parts": { "a": "Aigle, serpent et taureau", "b": "Chien, dragon et lion", "c": "Lion, chèvre et serpent", "d": "Loup, scorpion et bouc" },
+            "argonauts_leader": { "a": "Thésée", "b": "Bellerophon", "c": "Perseus", "d": "Jason" },
+            "titan_of_sun_before_apollo": { "a": "Hélios", "b": "Hypérion", "c": "Céos", "d": "Japet" },
+            "hephaestus_fall_duration": { "a": "Une journée entière", "b": "Neuf jours et neuf nuits", "c": "Trois jours", "d": "Un mois" },
+            "actaeon_metamorphosis": { "a": "En sanglier", "b": "En ours", "c": "En cerf", "d": "En cygne" },
+            "slayer_of_argus": { "a": "Ares", "b": "Apollo", "c": "Hephaistos", "d": "Hermes" },
+            "zeus_first_wife": { "a": "Métis", "b": "Thémis", "c": "Eurynomé", "d": "Mnémosyne" },
+            "hundred_handed_ones_name": { "a": "Les Gigantomaques", "b": "Les Hécatonchires", "c": "Les Aetoliens", "d": "Les Telchines" },
+            "orion_blindness_healer": { "a": "Hyperion", "b": "Prométhée", "c": "Hélios", "d": "Atlas" },
+            "mother_of_monsters_echidna": { "a": "Gaïa", "b": "Nyx", "c": "Thalassa", "d": "Céto" }
         }
     }
 }

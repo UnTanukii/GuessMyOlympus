@@ -1,7 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
 import { type Command } from "../types.js";
 import { getLocalizedCommand, getDefaultCommand } from "../utils/i18n.js";
-import { createQuestionComponents } from "../entities/index.js";
+import { Personality } from "../entities/index.js";
 
 const whoamiCommand: Command = {
     command: new SlashCommandBuilder()
@@ -13,7 +13,7 @@ const whoamiCommand: Command = {
         if (!interaction.inCachedGuild()) {
             return;
         }
-        const questionComponents = createQuestionComponents(0, interaction.locale);
+        const questionComponents = Personality.Components.Question.create(0, interaction.locale);
         return interaction.reply(questionComponents);
     },
     cooldown: 10

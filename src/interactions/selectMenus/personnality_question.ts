@@ -1,33 +1,33 @@
 import { type SelectMenu } from "../../types.js";
-import { createEntityResultComponents, createWaitingResultComponents, createQuestionComponents, calculateQuestionChanges, calculateClosestEntity } from "../../entities/index.js";
-import { personnalityQuestions } from "../../entities/questions.js";
+import { Personality} from "../../entities/index.js";
+import { personalityQuestions } from "../../entities/questions/personality.js";
 
-const personnalityQuestionSelectMenu: SelectMenu = {
-    name: /^personnality_question_(\d+)_(.+)$/,
+const personalityQuestionSelectMenu: SelectMenu = {
+    name: /^personality_question_(\d+)_(.+)$/,
     author: false,
     execute: async (interaction) => {
-        const questionMatch = interaction.customId.match(/^personnality_question_(\d+)_(.+)$/);
+        const questionMatch = interaction.customId.match(/^personality_question_(\d+)_(.+)$/);
         const questionNbText = questionMatch?.[1];
         const questionId = questionMatch?.[2];
         const answerId = interaction.values[0];
         if (questionNbText === undefined) return;
 
-        if (Number(questionNbText) + 1 >= personnalityQuestions.length) {
-            const waitingComponents = createWaitingResultComponents(interaction.locale);
+        if (Number(questionNbText) + 1 >= personalityQuestions.length) {
+            const waitingComponents = Personality.Components.WaitingResult.create(interaction.locale);
             await interaction.update(waitingComponents);
-            const closestEntity = calculateClosestEntity(interaction.user.id);
+            const closestEntity = Personality.Profile.getClosestEntity(interaction.user.id);
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const resultComponents = createEntityResultComponents(closestEntity!, interaction.locale);
+            const resultComponents = Personality.Components.EntityResult.create(closestEntity!, interaction.locale);
             await interaction.editReply(resultComponents);
             return;
         };
 
-        calculateQuestionChanges(interaction.user.id, questionId || 'undefined', answerId || 'undefined');
+        Personality.Profile.addAnswer(interaction.user.id, questionId || 'undefined', answerId || 'undefined');
 
         const questionNb = Number(questionNbText) + 1;
-        const questionComponents = createQuestionComponents(questionNb, interaction.locale);
+        const questionComponents = Personality.Components.Question.create(questionNb, interaction.locale);
         await interaction.update(questionComponents);
     }
 };
 
-export default personnalityQuestionSelectMenu;
+export default personalityQuestionSelectMenu;

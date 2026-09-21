@@ -109,7 +109,7 @@
             "description": "**The Sirens** are creatures with enchanting voices that lure sailors to their doom against the rocks. They have a seductive, manipulative, and mischievous personality, using charm to get what they want. 🧜‍♀️"
         }
     },
-    "personnality": {
+    "personality": {
         "fields": {
             "answer": "Answer {{answer}}",
             "answer_placeholder": "Select an answer...",
@@ -190,6 +190,36 @@
                 "c": "I immediately approach locals to make connections.",
                 "d": "I go with the flow and trust my instincts of the moment."
             }
+        }
+    },
+    "quizz": {
+        "questions": {
+            "goddess_of_retribution": "Which goddess personifies divine retribution and righteous anger?",
+            "underworld_five_rivers": "Which river in the Underworld causes complete forgetfulness?",
+            "monster_chimaera_parts": "Which animals primarily make up the body of the Chimera?",
+            "argonauts_leader": "Which hero led the quest for the Golden Fleece aboard the Argo?",
+            "titan_of_sun_before_apollo": "Which Titan embodied the Sun before that role was linked to Apollo?",
+            "hephaestus_fall_duration": "How long did Hephaestus fall after being cast out of Olympus?",
+            "actaeon_metamorphosis": "What animal was the hunter Actaeon turned into after seeing Artemis bathing?",
+            "slayer_of_argus": "Which god slew Argus of the Hundred Eyes under Zeus' orders?",
+            "zeus_first_wife": "Who was Zeus' very first wife, long before Hera?",
+            "hundred_handed_ones_name": "What are the three giants with 100 arms and 50 heads collectively called?",
+            "orion_blindness_healer": "Which Sun deity restored the sight of the blinded giant Orion?",
+            "mother_of_monsters_echidna": "According to Hesiod's Theogony, who is the mother of Echidna, the 'Mother of Monsters'?"
+        },
+        "answers": {
+            "goddess_of_retribution": { "a": "Nemesis", "b": "Eris", "c": "Hecate", "d": "Alecto" },
+            "underworld_five_rivers": { "a": "Acheron", "b": "Lethe", "c": "Cocytus", "d": "Phlegethon" },
+            "monster_chimaera_parts": { "a": "Eagle, snake, and bull", "b": "Dog, dragon, and lion", "c": "Lion, goat, and snake", "d": "Wolf, scorpion, and goat" },
+            "argonauts_leader": { "a": "Theseus", "b": "Bellerophon", "c": "Perseus", "d": "Jason" },
+            "titan_of_sun_before_apollo": { "a": "Helios", "b": "Hyperion", "c": "Coeus", "d": "Iapetus" },
+            "hephaestus_fall_duration": { "a": "One full day", "b": "Nine days and nine nights", "c": "Three days", "d": "One month" },
+            "actaeon_metamorphosis": { "a": "A boar", "b": "A bear", "c": "A stag", "d": "A swan" },
+            "slayer_of_argus": { "a": "Ares", "b": "Apollo", "c": "Hephaestus", "d": "Hermes" },
+            "zeus_first_wife": { "a": "Metis", "b": "Themis", "c": "Eurynome", "d": "Mnemosyne" },
+            "hundred_handed_ones_name": { "a": "The Gigantomaches", "b": "The Hekatonkheires", "c": "The Aetolians", "d": "The Telchines" },
+            "orion_blindness_healer": { "a": "Hyperion", "b": "Prometheus", "c": "Helios", "d": "Atlas" },
+            "mother_of_monsters_echidna": { "a": "Gaia", "b": "Nyx", "c": "Thalassa", "d": "Ceto" }
         }
     }
 }

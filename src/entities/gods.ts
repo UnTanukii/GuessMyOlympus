@@ -4,7 +4,7 @@ export const gods: Entity[] = [
   {
     id: "zeus",
     type: "god",
-    personnality: {
+    personality: {
       authority: 95,
       logic: 60,
       impulsivity: 90,
@@ -18,7 +18,7 @@ export const gods: Entity[] = [
   {
     id: "poseidon",
     type: "god",
-    personnality: {
+    personality: {
       authority: 85,
       logic: 30,
       impulsivity: 95,
@@ -32,7 +32,7 @@ export const gods: Entity[] = [
   {
     id: "hera",
     type: "god",
-    personnality: {
+    personality: {
       authority: 90,
       logic: 70,
       impulsivity: 60,
@@ -46,7 +46,7 @@ export const gods: Entity[] = [
   {
     id: "hades",
     type: "god",
-    personnality: {
+    personality: {
       authority: 90,
       logic: 85,
       impulsivity: 20,
@@ -60,7 +60,7 @@ export const gods: Entity[] = [
   {
     id: "athena",
     type: "god",
-    personnality: {
+    personality: {
       authority: 80,
       logic: 95,
       impulsivity: 10,
@@ -74,7 +74,7 @@ export const gods: Entity[] = [
   {
     id: "apollo",
     type: "god",
-    personnality: {
+    personality: {
       authority: 70,
       logic: 60,
       impulsivity: 50,
@@ -88,7 +88,7 @@ export const gods: Entity[] = [
   {
     id: "artemis",
     type: "god",
-    personnality: {
+    personality: {
       authority: 50,
       logic: 70,
       impulsivity: 40,
@@ -102,7 +102,7 @@ export const gods: Entity[] = [
   {
     id: "ares",
     type: "god",
-    personnality: {
+    personality: {
       authority: 60,
       logic: 10,
       impulsivity: 100,
@@ -116,7 +116,7 @@ export const gods: Entity[] = [
   {
     id: "aphrodite",
     type: "god",
-    personnality: {
+    personality: {
       authority: 60,
       logic: 30,
       impulsivity: 75,
@@ -130,7 +130,7 @@ export const gods: Entity[] = [
   {
     id: "hephaestus",
     type: "god",
-    personnality: {
+    personality: {
       authority: 30,
       logic: 85,
       impulsivity: 15,
@@ -144,7 +144,7 @@ export const gods: Entity[] = [
   {
     id: "hermes",
     type: "god",
-    personnality: {
+    personality: {
       authority: 50,
       logic: 70,
       impulsivity: 60,
@@ -158,7 +158,7 @@ export const gods: Entity[] = [
   {
     id: "dionysus",
     type: "god",
-    personnality: {
+    personality: {
       authority: 40,
       logic: 20,
       impulsivity: 90,
@@ -172,7 +172,7 @@ export const gods: Entity[] = [
   {
     id: "demeter",
     type: "god",
-    personnality: {
+    personality: {
       authority: 60,
       logic: 50,
       impulsivity: 40,

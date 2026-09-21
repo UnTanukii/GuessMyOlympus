@@ -25,7 +25,7 @@ export type EntityType = "god" | "hero" | "monster";
 export interface Entity {
     id: string, 
     type: EntityType,
-    personnality: {
+    personality: {
         authority: number,
         logic: number,
         impulsivity: number,
@@ -37,7 +37,7 @@ export interface Entity {
     }
 };
 
-export interface PersonnalityAnswer {
+export interface PersonalityAnswer {
     id: string, 
     changes: {
         authority?: number,
@@ -51,9 +51,21 @@ export interface PersonnalityAnswer {
     }
 };
 
-export interface PersonnalityQuestion {
+export interface PersonalityQuestion {
     id: string, 
-    answers: PersonnalityAnswer[]
+    answers: PersonalityAnswer[]
+};
+
+export interface QuizzAnswer {
+    id: string,
+    valid: boolean
+};
+
+export type QuizzQuestionDifficulty = "easy" | "medium" | "hard";
+export interface QuizzQuestion {
+    id: string, 
+    difficulty: QuizzQuestionDifficulty,
+    answers: QuizzAnswer[]
 };
 
 declare global {

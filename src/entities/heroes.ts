@@ -4,7 +4,7 @@ export const heroes: Entity[] = [
   {
     id: "hercules",
     type: "hero",
-    personnality: {
+    personality: {
       authority: 70,
       logic: 30,
       impulsivity: 85,
@@ -18,7 +18,7 @@ export const heroes: Entity[] = [
   {
     id: "achilles",
     type: "hero",
-    personnality: {
+    personality: {
       authority: 80,
       logic: 40,
       impulsivity: 90,
@@ -32,7 +32,7 @@ export const heroes: Entity[] = [
   {
     id: "odysseus",
     type: "hero",
-    personnality: {
+    personality: {
       authority: 75,
       logic: 90,
       impulsivity: 20,
@@ -46,7 +46,7 @@ export const heroes: Entity[] = [
   {
     id: "perseus",
     type: "hero",
-    personnality: {
+    personality: {
       authority: 60,
       logic: 75,
       impulsivity: 40,
