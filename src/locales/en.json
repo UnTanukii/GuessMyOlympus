@@ -1,16 +1,20 @@
 {
     "errors": {
         "cmd_cooldown": "You must wait {{time}} second(s) before using this command again.",
-        "int_not_author": "You cannot interact with this component because you are not the author."
+        "int_not_author": "You cannot interact with this interaction because you are not the author."
     },
     "commands": {
         "ping": {
             "name": "ping",
-            "description": "Responds with Pong!"
+            "description": "Replies with Pong!"
         },
         "whoami": {
             "name": "whoami",
-            "description": "Answer questions to find out which character from Greek mythology you are."
+            "description": "Answer questions to find out which Greek mythology character you are"
+        },
+        "quizz": {
+            "name": "quiz",
+            "description": "Test your knowledge of Greek mythology with a quiz"
         }
     },
     "entities": {
@@ -22,7 +26,7 @@
 
         "zeus": {
             "name": "Zeus",
-            "description": "**Zeus** is the king of the gods, ruler of Olympus, and master of the sky. He has a dominant, impulsive, and charismatic personality, always ready to enforce his authority. ⚡️"
+            "description": "**Zeus** is the king of the gods, ruler of Mount Olympus, and lord of the sky. He has a dominant, impulsive, and charismatic personality, always ready to assert his authority. ⚡️"
         },
         "poseidon": {
             "name": "Poseidon",
@@ -30,15 +34,15 @@
         },
         "hera": {
             "name": "Hera",
-            "description": "**Hera** is the queen of the gods and protector of the home and marriage. She has a proud, strategic, and unyielding personality when it comes to defending her status and principles. 👑"
+            "description": "**Hera** is the queen of the gods and the protector of hearth and marriage. She has a proud, strategic, and unyielding personality when it comes to defending her status and principles. 👑"
         },
         "hades": {
             "name": "Hades",
-            "description": "**Hades** is the master of the underworld and buried riches. He has a solitary, highly logical, and stoic personality, preferring the shadows to the light. 💀"
+            "description": "**Hades** is the ruler of the underworld and hidden riches. He has a solitary, extremely logical, and stoic personality, preferring the shadows to the light. 💀"
         },
         "athena": {
             "name": "Athena",
-            "description": "**Athena** is the goddess of wisdom and military strategy. She has a thoughtful, methodical, and calm personality, constantly seeking the most just and rational solution. 🦉"
+            "description": "**Athena** is the goddess of wisdom and military strategy. She has a thoughtful, methodical, and calm personality, always seeking the most just and rational solution. 🦉"
         },
         "apollo": {
             "name": "Apollo",
@@ -46,67 +50,67 @@
         },
         "artemis": {
             "name": "Artemis",
-            "description": "**Artemis** is the goddess of the hunt, the wilderness, and the moon. She has a fiercely independent personality, protective of her own, and detached from artificiality. 🏹"
+            "description": "**Artemis** is the goddess of the hunt, wild nature, and the moon. She has a fiercely independent personality, protective of her own, and detached from superficialities. 🏹"
         },
         "ares": {
             "name": "Ares",
-            "description": "**Ares** is the god of brutal war and the chaos of battle. He has an explosive, reckless, and headstrong personality, never backing down from a conflict. ⚔️"
+            "description": "**Ares** is the god of brutal war and the chaos of combat. He has an explosive, reckless, and go-getter personality, never backing down from a fight. ⚔️"
         },
         "aphrodite": {
             "name": "Aphrodite",
-            "description": "**Aphrodite** is the goddess of beauty, seduction, and love. She has a captivating, expressive, and at times fickle personality, fully aware of her power of attraction. ❤️"
+            "description": "**Aphrodite** is the goddess of beauty, seduction, and love. She has a captivating, expressive, and sometimes capricious personality, well aware of her power of attraction. ❤️"
         },
         "hephaestus": {
             "name": "Hephaestus",
-            "description": "**Hephaestus** is the god of fire, craftsmen, and the Olympus forges. He has a persevering, ingenious, and reserved personality, expressing himself through his creations. 🔥"
+            "description": "**Hephaestus** is the god of fire, artisans, and the forges of Olympus. He has a persevering, ingenious, and reserved personality, expressing himself through his creations. 🔥"
         },
         "hermes": {
             "name": "Hermes",
-            "description": "**Hermes** is the messenger of the gods and protector of travelers and tricksters. He has a sharp, mischievous, and highly adaptable personality, capable of wiggling out of any situation. 🕊️"
+            "description": "**Hermes** is the messenger of the gods and the protector of travelers and tricksters. He has a sharp, mischievous, and highly adaptable personality, able to get out of any situation. 🕊️"
         },
         "dionysus": {
             "name": "Dionysus",
-            "description": "**Dionysus** is the god of wine, theater, and letting go. He has an epicurean, festive, and unconventional personality, bringing energy and wildness wherever he goes. 🍷"
+            "description": "**Dionysus** is the god of wine, theater, and letting go. He has an epicurean, festive, and unconventional personality, bringing energy and madness wherever he goes. 🍷"
         },
         "demeter": {
             "name": "Demeter",
-            "description": "**Demeter** is the goddess of the earth, nature, and harvests. She has a deeply empathetic, benevolent, and protective personality, willing to do anything for her loved ones. 🌾"
+            "description": "**Demeter** is the goddess of the nourishing earth and harvests. She has a deeply empathetic, benevolent, and protective personality, ready to do anything for the well-being of her loved ones. 🌾"
         },
         "hercules": {
             "name": "Hercules",
-            "description": "**Hercules** is a demigod of superhuman strength, famous for his Twelve Labors. He has a courageous, impulsive personality, always ready to protect those he cares about. 🦁"
+            "description": "**Hercules** is a demigod of superhuman strength, famous for his Twelve Labors. He has a courageous and impulsive personality, always ready to protect those close to him. 🦁"
         },
         "achilles": {
             "name": "Achilles",
-            "description": "**Achilles** is the greatest warrior of the Trojan War, invulnerable except for his heel. He has a proud, passionate, and highly intense personality. 🗡️"
+            "description": "**Achilles** is the greatest warrior of the Trojan War, invulnerable except for his heel. He has a proud, passionate, and highly reactive personality. 🗡️"
         },
         "odysseus": {
             "name": "Odysseus",
-            "description": "**Odysseus** is the king of Ithaca renowned for his cunning, strategic mind, and long journey in the Odyssey. He has an extremely resourceful and persistent personality. ⛵"
+            "description": "**Odysseus** is the king of Ithaca, famous for his cunning, strategic mind, and long journey in the Odyssey. He has an extremely ingenious and tenacious personality. ⛵"
         },
         "perseus": {
             "name": "Perseus",
-            "description": "**Perseus** is the slayer of the Gorgon Medusa and savior of Andromeda. He has a resourceful, thoughtful personality guided by a strong sense of justice. 🛡️"
+            "description": "**Perseus** is the slayer of the Gorgon Medusa and the savior of Andromeda. He has a resourceful, thoughtful personality guided by a strong sense of justice. 🛡️"
         },
         "medusa": {
             "name": "Medusa",
-            "description": "**Medusa** is a Gorgon with a petrifying gaze and living snakes for hair. She has a distrustful, deeply solitary, and defensive personality, shaped by her tragic past. 🐍"
+            "description": "**Medusa** is a Gorgon with a petrifying gaze and a head of snakes for hair. She has a distrustful, deeply solitary, and defensive personality, marked by her tragic past. 🐍"
         },
         "minotaur": {
             "name": "The Minotaur",
-            "description": "**The Minotaur** is a half-man, half-bull monster trapped at the center of the Labyrinth. He has a brutal, impulsive personality driven by fierce and untamed instincts. 🐂"
+            "description": "**The Minotaur** is a half-man, half-bull monster trapped at the heart of the Labyrinth. He has a brutal, impulsive personality driven by a fierce and untamed instinct. 🐂"
         },
         "cerberus": {
             "name": "Cerberus",
-            "description": "**Cerberus** is the three-headed hound guarding the Underworld. He has a fiercely loyal, incorruptible, and overprotective personality regarding his domain and master. 🐕"
+            "description": "**Cerberus** is the three-headed dog guarding the Underworld. He has a fiercely loyal, incorruptible, and overprotective personality regarding his territory and master. 🐕"
         },
         "sphinx": {
             "name": "The Sphinx",
-            "description": "**The Sphinx** is a winged creature with a lion's body who devours those unable to answer her riddles. She has a mysterious, highly intellectual, and playful personality. 🦁"
+            "description": "**The Sphinx** is a winged creature with the body of a lion that devours those who fail her riddles. She has a mysterious, highly intellectual, and playful personality. 🦁"
         },
         "sirens": {
             "name": "The Sirens",
-            "description": "**The Sirens** are creatures with enchanting voices that lure sailors to their doom against the rocks. They have a seductive, manipulative, and mischievous personality, using charm to get what they want. 🧜‍♀️"
+            "description": "**The Sirens** are creatures with an enchanting song that lure sailors onto the rocks. They have a seductive, manipulative, and mischievous personality, using charm to achieve their ends. 🧜‍♀️"
         }
     },
     "personality": {
@@ -115,128 +119,147 @@
             "answer_placeholder": "Select an answer...",
             "waiting_result": "**Waiting for results...**",
             "result": "Based on your answers, your personality matches **{{entityName}}** the most!\n\n{{entityDescription}}",
-            "result_footer": "Quick disclaimer: this test is purely fictional and does not reflect reality. It is intended for entertainment purposes only (mostly because I get bored in lectures)."
+            "result_footer": "Quick disclaimer: this test is purely fictional and does not reflect reality. It is intended for entertainment purposes only (and mainly because I'm bored in class)"
         },
         "questions": {
-            "conflict": "Faced with an open argument, what is your first reflex?",
-            "ideal-space": "What is your ideal workspace or living area?",
-            "ambiguous-task": "You are given an important mission with very few instructions. What do you do?",
-            "support": "When faced with someone who is struggling or in distress:",
+            "conflict": "When faced with an open argument, what is your first instinct?",
+            "ideal-space": "What is your ideal work or living space?",
+            "ambiguous-task": "You are given an important mission with few guidelines. What do you do?",
+            "support": "When dealing with someone in difficulty or distress:",
             "unexpected-obstacle": "What is your strategy when facing an unexpected obstacle?",
             "social-event": "At a party or social gathering:",
-            "daily-expression": "How do you express your personality in daily life?",
-            "greatest-strength": "What is your greatest strength according to those close to you?",
-            "failure-reaction": "How do you react after a painful failure on a project?",
-            "unknown-place": "You suddenly find yourself dropped in a completely unknown place, what do you do?"
+            "daily-expression": "How do you express your personality on a daily basis?",
+            "greatest-strength": "What is your greatest strength according to your friends and family?",
+            "failure-reaction": "How do you react after a crushing failure on a project?",
+            "unknown-place": "You find yourself dropped into a completely unknown place, what do you do?"
         },
         "answers": {
             "conflict": {
-                "a": "I raise my voice to immediately restore order and enforce my authority.",
-                "b": "I act as a mediator to find a fair compromise for everyone.",
-                "c": "I defuse the conflict using humor or a touch of irony.",
-                "d": "I walk away; it is not my problem to solve."
+                "a": "I raise my voice to immediately restore order and assert my authority.",
+                "b": "I play mediator, looking for a fair compromise for everyone.",
+                "c": "Defuse the conflict with humor or a touch of irony.",
+                "d": "I step back from the group; it's not my problem to solve."
             },
             "ideal-space": {
-                "a": "An isolated, quiet place where nobody disturbs me.",
-                "b": "A lively spot surrounded by people, music, and activity.",
-                "c": "An ultra-organized, functional space where everything has its place.",
-                "d": "A creative studio or workshop filled with ongoing projects."
+                "a": "An isolated, quiet place where nobody comes to bother me.",
+                "b": "A lively place, surrounded by people with music and movement.",
+                "c": "An ultra-organized and functional space where everything has its place.",
+                "d": "A creative workshop or studio filled with ongoing projects."
             },
             "ambiguous-task": {
                 "a": "I improvise on the spot based on my intuition.",
-                "b": "I set up a rigorous strategic plan before laying the first brick.",
-                "c": "I ask for the group's input so we can move forward together.",
-                "d": "I handle it on my own, my way, without answering to anyone."
+                "b": "I build a rigorous strategic plan before taking the slightest action.",
+                "c": "I ask for the group's opinion to move forward together.",
+                "d": "I handle it alone in my own way, without answering to anyone."
             },
             "support": {
                 "a": "I take them under my wing and protect them at all costs.",
                 "b": "I give them logical advice so they can solve the problem themselves.",
-                "c": "It makes me uncomfortable; I prefer to keep my distance.",
-                "d": "I use clever tricks or my contacts to solve their problem behind the scenes."
+                "c": "It makes me uncomfortable, I prefer to keep my distance.",
+                "d": "I use cunning or my connections to solve their problem behind the scenes."
             },
             "unexpected-obstacle": {
                 "a": "Brute force and direct confrontation.",
-                "b": "Find a creative workaround or a loophole in the system.",
-                "c": "Coldly reassess the situation and adjust my approach.",
-                "d": "Stand my ground and wait for the obstacle to give way."
+                "b": "Finding a creative workaround or a flaw in the system.",
+                "c": "Coldly reassessing the situation and adjusting my approach.",
+                "d": "Standing firm on my positions and waiting for the obstacle to give way."
             },
             "social-event": {
                 "a": "I am the center of attention and the life of the party.",
-                "b": "I stay with a few close friends to make sure everyone is doing well.",
+                "b": "I stay with my close friends to make sure everyone is doing well.",
                 "c": "I prefer to observe from a quiet corner.",
-                "d": "I like to throw out playful challenges or tease people."
+                "d": "I like to throw out little challenges or tease people."
             },
             "daily-expression": {
                 "a": "Through art, style, music, or writing.",
-                "b": "Through my achievements, my position, and my successes.",
+                "b": "Through my achievements, status, and successes.",
                 "c": "Through my sense of justice and fairness.",
-                "d": "Through my humor, my stories, and my boldness."
+                "d": "Through my humor, stories, and boldness."
             },
             "greatest-strength": {
                 "a": "Your loyalty and your ability to care for others.",
                 "b": "Your composure and tactical intelligence.",
-                "c": "Your boundless energy and limitless boldness.",
+                "c": "Your boundless energy and limitless daring.",
                 "d": "Your adaptability and sharp mind."
             },
             "failure-reaction": {
                 "a": "I slam my fist on the table and immediately jump back in to get my revenge.",
-                "b": "I dispassionately analyze my mistakes so I never repeat them.",
-                "c": "I bypass the issue or find a clever way to land on my feet.",
-                "d": "I seek comfort and advice from my close friends to process it."
+                "b": "I coldly analyze my mistakes so I never repeat them.",
+                "c": "I bypass the issue or find an excuse to land on my feet.",
+                "d": "I seek support from my loved ones to calmly review the situation."
             },
             "unknown-place": {
-                "a": "I go explore the surroundings on my own without waiting for anyone.",
-                "b": "I analyze the area and make a methodical mapping plan.",
-                "c": "I immediately approach locals to make connections.",
-                "d": "I go with the flow and trust my instincts of the moment."
+                "a": "I set off to explore the surroundings alone without waiting for anyone.",
+                "b": "I analyze the location and establish a methodical mapping plan.",
+                "c": "I immediately go meet the locals to make contact.",
+                "d": "I go with the flow, guided by the atmosphere and my current instinct."
             }
         }
     },
     "quizz": {
+        "fields": {
+            "select_difficulty_title": "Select a difficulty for the quiz",
+            "select_difficulty_placeholder": "Select a difficulty...",
+            "easy": "Easy",
+            "medium": "Medium",
+            "hard": "Hard",
+            "expert": "Expert",
+            "all": "All difficulties combined",
+            "answer": "Answer {{answer}}",
+            "answer_placeholder": "Select an answer...",
+            "current_score": "Current score: {{score}}/{{total}}",
+            "correct_answer": "Your answer is correct! ✅",
+            "incorrect_answer": "Your answer is incorrect. \nThe correct answer was: **{{correctAnswerLetter}}) {{correctAnswerString}}** ❌",
+            "final_score_title": "Final quiz results",
+            "final_score_description": "**Congratulations!** You finished the quiz with a score of **{{score}}/{{total}}**.\n{{finalMessage}}",
+            "final_score_perfect": "You are a true expert in Greek mythology! It doesn't get any better than this!",
+            "final_score_more_half": "You are a true connoisseur of Greek mythology!",
+            "final_score_less_half": "You still have things to learn about Greek mythology, but don't get discouraged!"
+        },
         "questions": {
-            "goddess_of_retribution": "Which goddess personifies divine retribution and righteous anger?",
-            "underworld_five_rivers": "Which river in the Underworld causes complete forgetfulness?",
-            "monster_chimaera_parts": "Which animals primarily make up the body of the Chimera?",
-            "argonauts_leader": "Which hero led the quest for the Golden Fleece aboard the Argo?",
-            "gorgon_who_was_mortal": "Which of the three Gorgon sisters was the only one who was mortal?",
-            "apple_of_discord_label": "What words were inscribed on the Golden Apple of Discord thrown by Eris?",
-            "heracles_first_labor": "What was the very first of Heracles' Twelve Labors?",
-            "ferryman_of_the_dead": "What is the name of the ferryman who carries souls across the Styx?",
-            "god_of_wine_and_ecstasy": "Which Olympian god protects the vine, wine, and theatre?",
+            "goddess_of_retribution": "Which goddess personifies divine vengeance and righteous anger?",
+            "underworld_five_rivers": "Which river of the Underworld personifies forgetfulness?",
+            "monster_chimaera_parts": "Which animals is the Chimera primarily composed of?",
+            "argonauts_leader": "Which hero led the quest for the Golden Fleece aboard the ship Argo?",
+            "gorgon_who_was_mortal": "Which of these three Gorgons was the only mortal one?",
+            "apple_of_discord_label": "What was inscribed on the Golden Apple of Discord thrown by Eris?",
+            "heracles_first_labor": "What was the very first of Heracles' twelve labors?",
+            "ferryman_of_the_dead": "What is the name of the ferryman who carries souls across the River Styx?",
+            "god_of_wine_and_ecstasy": "Which Olympian god is the protector of the vine, wine, and theater?",
             "guardian_three_headed_dog": "Which monstrous three-headed dog guards the entrance to the Underworld?",
 
-            "titan_of_sun_before_apollo": "Which Titan embodied the Sun before that role was linked to Apollo?",
-            "hephaestus_fall_duration": "How long did Hephaestus fall after being cast out of Olympus?",
-            "actaeon_metamorphosis": "What animal was the hunter Actaeon turned into after seeing Artemis bathing?",
-            "slayer_of_argus": "Which god slew Argus of the Hundred Eyes under Zeus' orders?",
-            "titan_holding_celestial_heavens": "Which Titan was condemned by Zeus to hold up the celestial heavens?",
-            "nurse_of_zeus_goat": "What was the name of the divine goat that nursed Zeus in a cave on Crete?",
-            "judge_of_underworld_minos_brother": "Which of the three Judges of the Underworld judged Asiatic souls?",
-            "inventor_of_labyrinth": "Which mythical Athenian craftsman constructed the Labyrinth of the Minotaur?",
+            "titan_of_sun_before_apollo": "Which Titan embodied the Sun before this role was associated with Apollo?",
+            "hephaestus_fall_duration": "How long did Hephaestus' fall last when he was thrown from Mount Olympus?",
+            "actaeon_metamorphosis": "Into what animal was the hunter Actaeon turned by Artemis for seeing her naked?",
+            "slayer_of_argus": "Which god beheaded Argus of the hundred eyes on Zeus' order?",
+            "titan_holding_celestial_heavens": "Which Titan condemned by Zeus must hold up the celestial heavens on his shoulders?",
+            "nurse_of_zeus_goat": "What was the name of the divine goat that nursed Zeus in a Cretan cave?",
+            "judge_of_underworld_minos_brother": "Among the three judges of the Underworld, which brother of Minos judged Asian souls?",
+            "inventor_of_labyrinth": "Which mythical Athenian architect designed the Minotaur's Labyrinth?",
             "hero_slayer_of_chimera": "Which Corinthian hero defeated the Chimera while riding Pegasus?",
-            "goddess_born_from_sea_foam": "Which goddess of love was born from the sea foam created by Uranus' castration?",
+            "goddess_born_from_sea_foam": "Which goddess of love was born from the sea foam created by the castration of Ouranos?",
 
-            "zeus_first_wife": "Who was Zeus' very first wife, long before Hera?",
+            "zeus_first_wife": "Who was Zeus' very first legitimate wife, long before Hera?",
             "hundred_handed_ones_name": "What are the three giants with 100 arms and 50 heads collectively called?",
-            "orion_blindness_healer": "Which Sun deity restored the sight of the blinded giant Orion?",
+            "orion_blindness_healer": "Which Sun Titan restored the sight of the blinded giant Orion?",
             "mother_of_monsters_echidna": "According to Hesiod's Theogony, who is the mother of Echidna, the 'Mother of Monsters'?",
             "personification_of_peace": "Which Greek Hora (Hour) is the exact personification of Peace?",
-            "winged_god_of_dreams": "Which winged god, son of Hypnos, shapes human appearances in dreams?",
-            "true_name_of_the_furies": "What is the original Greek name of the three underworld goddesses of vengeance (Furies in Latin)?",
-            "sea_god_who_can_change_shape": "Which shape-shifting old sea god would tell the truth if captured?",
-            "graeae_sisters_single_organ": "Which single organ did the three Graeae sisters share and take turns using?",
-            "tityos_punishment_underworld": "Which giant in Tartarus has his liver eternally devoured by two vultures?",
+            "winged_god_of_dreams": "Which winged god, son of Hypnos, has the power to shape forms in dreams?",
+            "true_name_of_the_furies": "What is the original Greek name of the three chthonic goddesses of vengeance (Furies in Latin)?",
+            "sea_god_who_can_change_shape": "Which old shapeshifting sea god told the truth if you managed to capture him?",
+            "graeae_sisters_single_organ": "Which single organ do the three Graeae sisters share by taking turns?",
+            "tityos_punishment_underworld": "Which giant of Tartarus has his liver eternally devoured by two vultures?",
 
-            "giant_crushed_under_sicily": "Which Giant was defeated by Athena during the Gigantomachy and buried under the island of Sicily?",
-            "hephaestus_trapped_chair_victim": "Which Olympian goddess did Hephaestus trick with a cursed golden throne to avenge his abandonment?",
-            "first_mortal_woman_creator": "Which artisan god fashioned Pandora's body out of clay by order of Zeus?",
-            "oath_river_of_gods_punishment": "How many years is a god who breaks an oath sworn on the River Styx exiled from divine councils?",
+            "giant_crushed_under_sicily": "Which Giant was defeated by Athena during the Gigantomachy and crushed under the island of Sicily?",
+            "hephaestus_trapped_chair_victim": "To which goddess of Olympus did Hephaestus gift a trapped golden throne to get revenge?",
+            "first_mortal_woman_creator": "Which artisan god fashioned Pandora's body out of clay on Zeus' order?",
+            "oath_river_of_gods_punishment": "How many years is a god who breaks an oath on the Styx banished from the council of gods?",
             "pomegranate_seeds_eaten_by_persephone": "How many pomegranate seeds did Persephone eat in the Underworld according to the Homeric Hymn?",
-            "prophet_transformed_into_woman": "Which prophet of Thebes spent 7 years as a woman after striking two mating snakes?",
-            "boreas_south_wind_counterpart": "In Greek mythology, what is the name of the god personifying the wet South Wind?",
-            "alcyone_and_ceyx_birds": "Which bird was Alcyone transformed into after her husband Ceyx drowned?",
-            "titaness_of_memory_mother_muses": "Which Titaness personifying Memory is the mother of the 9 Muses born to Zeus?",
-            "who_brought_typhon_to_life": "Which primordial deity birthed the monster Typhon with Tartarus to punish Zeus?"
+            "prophet_transformed_into_woman": "Which prophet of Thebes spent 7 years as a woman for striking two mating snakes?",
+            "boreas_south_wind_counterpart": "In Greek mythology, what is the name of the god personifying the South Wind (Hot and Humid)?",
+            "alcyone_and_ceyx_birds": "Into what bird did the gods transform Alcyone after her husband Ceyx drowned?",
+            "titaness_of_memory_mother_muses": "Which Titaness embodying Memory is the mother of the 9 Muses born to Zeus?",
+            "who_brought_typhon_to_life": "Which primordial goddess bore the monster Typhon with Tartarus to punish Zeus?"
         },
         "answers": {
             "goddess_of_retribution": { "a": "Nemesis", "b": "Eris", "c": "Hecate", "d": "Alecto" },
@@ -251,35 +274,35 @@
             "guardian_three_headed_dog": { "a": "Orthrus", "b": "Cerberus", "c": "Ladon", "d": "Fenrir" },
 
             "titan_of_sun_before_apollo": { "a": "Helios", "b": "Hyperion", "c": "Coeus", "d": "Iapetus" },
-            "hephaestus_fall_duration": { "a": "One full day", "b": "Nine days and nine nights", "c": "Three days", "d": "One month" },
-            "actaeon_metamorphosis": { "a": "A boar", "b": "A bear", "c": "A stag", "d": "A swan" },
+            "hephaestus_fall_duration": { "a": "A full day", "b": "Nine days and nine nights", "c": "Three days", "d": "One month" },
+            "actaeon_metamorphosis": { "a": "Into a boar", "b": "Into a bear", "c": "Into a stag", "d": "Into a swan" },
             "slayer_of_argus": { "a": "Ares", "b": "Apollo", "c": "Hephaestus", "d": "Hermes" },
             "titan_holding_celestial_heavens": { "a": "Atlas", "b": "Prometheus", "c": "Epimetheus", "d": "Crius" },
-            "nurse_of_zeus_goat": { "a": "Io", "b": "Amalthea", "c": "Callisto", "d": "Melisseus" },
+            "nurse_of_zeus_goat": { "a": "Io", "b": "Amalthaea", "c": "Callisto", "d": "Melissa" },
             "judge_of_underworld_minos_brother": { "a": "Aeacus", "b": "Sarpedon", "c": "Rhadamanthus", "d": "Triptolemus" },
             "inventor_of_labyrinth": { "a": "Icarus", "b": "Pegasus", "c": "Talos", "d": "Daedalus" },
             "hero_slayer_of_chimera": { "a": "Bellerophon", "b": "Perseus", "c": "Theseus", "d": "Cadmus" },
             "goddess_born_from_sea_foam": { "a": "Amphitrite", "b": "Aphrodite", "c": "Thetis", "d": "Calypso" },
 
             "zeus_first_wife": { "a": "Metis", "b": "Themis", "c": "Eurynome", "d": "Mnemosyne" },
-            "hundred_handed_ones_name": { "a": "The Gigantomaches", "b": "The Hekatonkheires", "c": "The Aetolians", "d": "The Telchines" },
+            "hundred_handed_ones_name": { "a": "Gigantomaches", "b": "Hecatoncheires", "c": "Aetolians", "d": "Telchines" },
             "orion_blindness_healer": { "a": "Hyperion", "b": "Prometheus", "c": "Helios", "d": "Atlas" },
             "mother_of_monsters_echidna": { "a": "Gaia", "b": "Nyx", "c": "Thalassa", "d": "Ceto" },
-            "personification_of_peace": { "a": "Irene", "b": "Eunomia", "c": "Dike", "d": "Harmonia" },
+            "personification_of_peace": { "a": "Eirene", "b": "Eunomia", "c": "Dike", "d": "Harmonia" },
             "winged_god_of_dreams": { "a": "Phantasos", "b": "Morpheus", "c": "Phobetor", "d": "Ikelos" },
             "true_name_of_the_furies": { "a": "The Moirai", "b": "The Harpies", "c": "The Erinyes", "d": "The Keres" },
             "sea_god_who_can_change_shape": { "a": "Nereus", "b": "Triton", "c": "Glaucus", "d": "Proteus" },
             "graeae_sisters_single_organ": { "a": "One eye (and one tooth)", "b": "One hand", "c": "One heart", "d": "One ear" },
             "tityos_punishment_underworld": { "a": "Tantalus", "b": "Tityos", "c": "Ixion", "d": "Sisyphus" },
 
-            "giant_crushed_under_sicily": { "a": "Enceladus", "b": "Porphyrion", "c": "Alcyoneus", "d": "Mimas" },
+            "giant_crushed_under_sicily": { "a": "Enceladus", "b": "Porphyrion", "c": "Alkyoneus", "d": "Mimas" },
             "hephaestus_trapped_chair_victim": { "a": "Demeter", "b": "Hera", "c": "Aphrodite", "d": "Hestia" },
             "first_mortal_woman_creator": { "a": "Prometheus", "b": "Epimetheus", "c": "Hephaestus", "d": "Hermes" },
             "oath_river_of_gods_punishment": { "a": "1 year", "b": "7 years", "c": "9 years", "d": "10 years" },
             "pomegranate_seeds_eaten_by_persephone": { "a": "6 seeds", "b": "3 seeds", "c": "12 seeds", "d": "1 seed" },
             "prophet_transformed_into_woman": { "a": "Calchas", "b": "Tiresias", "c": "Mopsus", "d": "Amphiaraus" },
             "boreas_south_wind_counterpart": { "a": "Zephyrus", "b": "Eurus", "c": "Notus", "d": "Lips" },
-            "alcyone_and_ceyx_birds": { "a": "A swift", "b": "An albatross", "c": "A seagull", "d": "A kingfisher" },
+            "alcyone_and_ceyx_birds": { "a": "Into a swift", "b": "Into an albatross", "c": "Into a seagull", "d": "Into a kingfisher" },
             "titaness_of_memory_mother_muses": { "a": "Mnemosyne", "b": "Theia", "c": "Phoebe", "d": "Tethys" },
             "who_brought_typhon_to_life": { "a": "Hera", "b": "Gaia", "c": "Nyx", "d": "Echidna" }
         }
