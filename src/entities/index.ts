@@ -206,6 +206,7 @@ export const Quizz = {
             const questions = Quizz.Questions.getRandomQuestions(difficulty);
             if (questions.length === 0) return [];
             userQuizzQuestions.set(userId, questions.map(q => q.id).join(','));
+            userQuizzScore.set(userId, 0);
             return questions;
         },
 

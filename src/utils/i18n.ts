@@ -1,6 +1,6 @@
 import { init, getFixedT } from "i18next";
 import fr from "../locales/fr.json" with { type: "json" };
-import en from "../locales/en.json" with { type: "json" };
+import en from "../locales/fr.json" with { type: "json" };
 
 const defaultLanguage = "fr";
 const resources = {
