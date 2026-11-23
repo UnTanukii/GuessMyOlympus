@@ -75,7 +75,6 @@ declare global {
             DISCORD_TOKEN: string,
             CLIENT_ID: string,
             DEVELOPMENT_GUILD_ID: string,
-            DB_AUTH: string,
         }
     }
 };
