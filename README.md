@@ -61,4 +61,4 @@ src/
 
 ## Licence
 
-MIT
+[MIT](LICENSE)
